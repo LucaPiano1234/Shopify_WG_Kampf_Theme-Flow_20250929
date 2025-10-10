@@ -29,9 +29,6 @@
 
   assign promo_img_props = "style='max-width: '" | append: promo_img.width | append: 'px;'
 
-  assign promo_img_alt = promo_img.alt | default: promo_text_heading | default: shop.name
-  assign promo_img_alt = promo_img_alt | escape
-
   assign tag = "div"
   assign accessibility_attr = ""
   if promo_link != blank
@@ -48,6 +45,8 @@
     assign img_crop = " mega-menu-aspect-ratio" | append: " aspect-ratio--" | append: promo_img_crop
     assign img_stretch = true
   endif
+
+  assign promo_text_color = 'rgba(' | append: promo_text_color.rgba | append: ')'
 %}
 
 
@@ -55,10 +54,10 @@
   <div class="inner mega-menu--image-wrapper">
     <div class="mega-menu-promo{{ promo_layout_classes }}">
 
-      <{{ tag }} class="mega-menu-promo-wrapper{% if promo_link != blank %} nav-link-animated--custom{% endif %}"{{ attr }}{{ accessibility_attr }}>
+      <{{ tag }} class="mega-menu-promo-wrapper block-radius-clip{% if promo_link != blank %} nav-link-animated--custom{% endif %}"{{ attr }}{{ accessibility_attr }}>
 
         <div class="mega-menu-promo-image{{ img_crop }}">
-          {% render 'responsive-image' with promo_img, allow_stretch: img_stretch, alt: promo_img_alt, props: promo_img_props %}
+          {% render 'responsive-image' with promo_img, allow_stretch: img_stretch, props: promo_img_props %}
         </div>
 
         {% if promo_text != blank and promo_text_overlay %}

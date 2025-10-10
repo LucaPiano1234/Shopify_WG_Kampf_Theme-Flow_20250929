@@ -1,26 +1,31 @@
 {% assign permalinkURL = '' %}
 {% assign shareTitle = '' %}
 {% assign shareImage = '' %}
+{% assign current_variant = product.selected_or_first_available_variant %}
 {% if template contains 'article' %}
 
-    {% capture permalinkURL %}{{ shop.url }}{{ article.url }}{% endcapture %}
-    {% capture shareTitle %}{{ article.title }}{% endcapture %}
-    {% if article.featured_image %}
-      {% capture shareImage %}{{ article.featured_image | image_url: width: 1200 }}{% endcapture %}
-    {% elsif settings.share_image %}
-      {% capture shareImage %}{{ settings.share_image | image_url: width: 1200 }}{% endcapture %}
-    {% endif %}
+  {% capture permalinkURL %}{{ shop.url }}{{ article.url }}{% endcapture %}
+  {% capture shareTitle %}{{ article.title }}{% endcapture %}
+  {% if article.featured_image %}
+    {% capture shareImage %}{{ article.featured_image | image_url: width: 1200 }}{% endcapture %}
+  {% elsif settings.share_image %}
+    {% capture shareImage %}{{ settings.share_image | image_url: width: 1200 }}{% endcapture %}
+  {% endif %}
 
 {% elsif template contains 'product' %}
 
-    {% capture permalinkURL %}{{ shop.url }}{{ product.url }}{% endcapture %}
-    {% capture shareTitle %}{{ product.title }}{% endcapture %}
-    {% if product.media.size > 0 %}
-      {% capture shareImage %}{{ product.media[0].preview_image | image_url: width: 1200 }}{% endcapture %}
+  {% capture permalinkURL %}{{ shop.url }}{{ product.url }}{% unless product.has_only_default_variant %}?variant={{ current_variant.id }}{% endunless %}{% endcapture %}
+  {% capture shareTitle %}{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}{% endcapture %}
+
+  {% capture shareImage %}
+    {% if current_variant.featured_media.preview_image %}
+      {{ current_variant.featured_media.preview_image | image_url: width: 1200 }}
+    {% elsif product.featured_media.preview_image %}
+      {{ product.featured_media.preview_image | image_url: width: 1200 }}
     {% elsif settings.share_image %}
       {% capture shareImage %}{{ settings.share_image | image_url: width: 1200 }}{% endcapture %}
     {% endif %}
-
+  {% endcapture %}
 {% endif %}
 
 <div id="sharing" class="social-sharing" data-permalink="{{ permalinkURL }}">

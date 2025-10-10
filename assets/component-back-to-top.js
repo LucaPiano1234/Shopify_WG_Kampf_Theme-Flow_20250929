@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 class BackToTop extends HTMLElement {
   constructor() {
     super();
@@ -38,8 +37,10 @@ class BackToTop extends HTMLElement {
     const showButton = isDesktop || scrollingUp;
     if (window.pageYOffset > window.innerHeight && showButton) {
       this.showButton();
+      window.eventBus.emit('back-to-top:visible');
     } else {
       this.hideButton();
+      window.eventBus.emit('back-to-top:hidden');
     }
   }
 

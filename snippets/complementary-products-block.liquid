@@ -11,10 +11,17 @@
   - custom_icon: {String} the custom icon to display eg. block.settings.custom_icon
   - icon: {String} the icon to display eg. block.settings.icon
   - id: {String} the id of the block eg. block.id
+  - tab_open_by_default: {Boolean} whether the tab should be open by default eg. block.settings.open_by_default
 
   Usage:
     {% render 'complementary-products-block' with block_settings: block.settings %}
 {% endcomment %}
+
+{% style %}
+  complementary-products {
+    display: block;
+  }
+{% endstyle %}
 
 <complementary-products
   {%- if classes != blank -%}class="{{ classes | strip }}"{%- endif -%}
@@ -35,7 +42,7 @@
         endif 
       %}
 
-      <div class="collapsible-tab">
+      <div class="collapsible-tab{% if tab_open_by_default %} open{% endif %}">
         <collapsible-button tabindex="0">
           <div class="summary">
             {% render 'text-with-icon', icon: icon, custom_icon: custom_icon, text: title, text_classes: 'label-font' %}

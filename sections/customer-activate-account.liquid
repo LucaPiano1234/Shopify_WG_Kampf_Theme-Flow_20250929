@@ -1,12 +1,14 @@
 <!-- /sections/customer-activate-account.liquid -->
 
-<div class="wrapper-padded">
-  <div class="grid page-main--wrapper">
-    <div class="grid__item large--one-third push--large--one-third text-center">
+{{ 'template-customer-accounts.min.css' | asset_url | stylesheet_tag: preload: true }}
 
-      <div class="sitewide--title-wrapper">
+<div class="wrapper-spacing--v--template wrapper-spacing--h">
+  <div class="grid page-main--wrapper">
+    <div class="grid__item grid__item--customer-accounts large--one-third push--large--one-third text-center">
+
+      <div class="template-title--wrapper">
         
-        <h1 class="page--title">{{ 'customer.activate_account.title' | t }}</h1>
+        <h1 class="page--title template-title">{{ 'customer.activate_account.title' | t }}</h1>
       </div>
       <p>{{ 'customer.activate_account.subtext' | t }}</p>
 

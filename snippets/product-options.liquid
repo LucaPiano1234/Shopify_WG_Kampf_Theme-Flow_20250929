@@ -12,48 +12,18 @@ Parameters:
 {% endif %}
 
 {% if product.variants.size > 0 %}
-  <div {% if classes %}{{ classes }} {% endif %}{% if block_attributes %}{{ block_attributes }}{% endif %}>
-    {% if variant_style == 'dropdowns' %}
-
-      {% for option in product.options_with_values %}
-
-        {% assign option_index = forloop.index0 %}
-
+  <div data-product-options {% if classes %}{{ classes }} {% endif %}{% if block_attributes %}{{ block_attributes }}{% endif %}>
+    {% for option in product.options_with_values %}
+      {% assign option_idx = forloop.index0 %}
+      {% if variant_style == 'dropdowns' %}
         <div class="selector-wrapper js{% if hide_default_title == true %} hide{% endif %}">
-          {%- render 'variant-dropdown',
-            option_index: option_index,
-            forloop_index: forloop.index,
-            forloop_index0: forloop.index0,
-            dropdown_option: option,
-            dropdown_product: product,
-            size_option_name: size_option_name,
-            size_guide_page: size_guide_page,
-            hide_out_of_stock_variants: hide_out_of_stock_variants
-          -%}
+          {%- render 'variant-dropdown' with dropdown_option: option, option_index: option_idx, product: product, size_option_name: size_option_name, size_guide_page: size_guide_page, size_guide_label: size_guide_label, hide_out_of_stock_variants: hide_out_of_stock_variants, dropdown_section_id: section_id -%}
         </div>
-      {% endfor %}
-
-    {% else %}
-
-      {% if hide_default_title == false %}
-        {% for option in product.options %}
-          {% render 'swatch' with option, product: product, size_option_name: size_option_name, size_guide_page: size_guide_page, hide_out_of_stock_variants: hide_out_of_stock_variants %}
-        {% endfor %}
+      {% else %}
+        {% if hide_default_title == false %}
+          {% render 'swatch' with swatch_option: option, option_index: option_idx, size_option_name: size_option_name, size_guide_page: size_guide_page, size_guide_label: size_guide_label, hide_out_of_stock_variants: hide_out_of_stock_variants, swatch_section_id: section_id %}
+        {% endif %}
       {% endif %}
-
-    {% endif %}
+    {% endfor %}
   </div>
 {% endif %}
-
-
-<select name="id" id="productSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-single__variants original-select no-js" autocomplete="off" v-model="variant && variant.id">
-  {% for variant in product.variants %}
-    {% if variant.available %}
-      <option {% if variant.id == current_variant.id %} selected {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
-    {% else %}
-      <option value="{{ variant.id }}" disabled>
-        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
-      </option>
-    {% endif %}
-  {% endfor %}
-</select>

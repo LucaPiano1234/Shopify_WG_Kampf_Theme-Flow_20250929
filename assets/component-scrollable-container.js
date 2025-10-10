@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 class ScrollableContainer extends HTMLElement {
   constructor() {
     super();

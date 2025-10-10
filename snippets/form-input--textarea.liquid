@@ -3,6 +3,7 @@
 
     Accepts:
     - has_label: {Boolean} use if the input should be accompanied by a label
+    - hint_text: {String} the text to display as a hint (optional)
     - animate_label: {Boolean} use if you want to animate label on input focus
     - label_text: {String} the text to display as the label
     - label_class: {String} any custom classes for the label element
@@ -19,6 +20,8 @@
     - content: {String} textarea content. To be used along with 'form.body' or 'cart.note' if needed
     - data_aid: {String} data aid for the textarea
     - disabled: {Boolean} determines whether the input is disabled or not
+    - form_id: {String} the form id to be used for the form attribute (optional)
+    - error_message: {String} the error message to display if the input is invalid
 
     Usage:
       {% render 'form-input--textarea' with id: 'contact-form--message', classes: 'py-3', placeholder: 'Message', name: 'contact[body]', attributes: 'aria-label="Message"', required: true, content: form.body  %}
@@ -38,7 +41,11 @@
   {% endif %}
 {% endunless %}
 
-{% if secondary_label or container_classes %}
+{% if hint_text != blank %}
+  <div class="form-input-hint text-link-animated">{{ hint_text }}</div>
+{% endif %}
+
+{% if secondary_label and secondary_label != '' or container_classes %}
   <div {% if container_classes %}class="{{ container_classes }}"{% endif %}>
 {% endif %}
 
@@ -46,18 +53,24 @@
   <div>
 {% endif %}
 
+{% unless has_label %}
+  <label class="sr-only" for="{{ id }}">{{ placeholder }}</label>
+{% endunless %}
+
 <textarea
   name="{{ name }}" 
   {% if classes %}class="{{ classes }}"{% endif %} 
   placeholder="{{ placeholder }}" 
+  {% if error_message %}data-error-message="{{ error_message | escape }}"{% endif %}
   {% if animate_label %} animate-label{% endif %}
   {% if id %} id="{{ id }}"{% endif %}
   {% if attributes %} {{ attributes }}{% endif %}
-  {% if required %} required="required"{% endif %}
+  {% if required %} required aria-required="true"{% endif %}
   rows="{{ rows | default: 10 }}"
-  {% if max_characters %}maxlength="{{ max_characters }}"{% endif %}
+  {% if max_characters != '' %}maxlength="{{ max_characters }}"{% endif %}
   {% if data_aid %}data-aid="{{ data_aid }}"{% else %}data-aid="textarea"{% endif %}
   {% if disabled %}disabled{% endif %}
+  {% if form_id %}form="{{ form_id }}"{% endif %}
 >{% if content %}{{ content }}{% endif %}</textarea>
 
 {% if has_label and animate_label == true %}
@@ -68,10 +81,10 @@
   </div>
 {% endif %}
 
-{% if secondary_label %}
-  <label>{{ secondary_label }}</label>
+{% if secondary_label and secondary_label != '' %}
+  <label class="input-label--secondary">{{ secondary_label }}</label>
 {% endif %}
 
-{% if secondary_label or container_classes %}
+{% if secondary_label and secondary_label != '' or container_classes %}
   </div>
 {% endif %}

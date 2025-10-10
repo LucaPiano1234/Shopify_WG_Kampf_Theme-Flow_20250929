@@ -1,17 +1,34 @@
 {
   "general": {
-    "meta": {
-      "tags": "เครื่องหมาย \"{{ tags }}\"",
-      "page": "หน้า {{ page }}"
-    },
     "404": {
       "title": "404 ไม่พบหน้า",
       "subtext_html": "หน้าที่คุณขอไม่มีอยู่"
     },
+    "meta": {
+      "tags": "เครื่องหมาย \"{{ tags }}\"",
+      "page": "หน้า {{ page }}"
+    },
+    "forms": {
+      "required_input_error": "กรุณากรอกข้อมูลในช่องนี้",
+      "required_input_error_with_label": "กรุณากรอกข้อมูลในช่อง \"{{ label }}\"",
+      "required_upload_error": "กรุณาอัพโหลดไฟล์.",
+      "required_upload_error_with_label": "โปรดอัปโหลดไฟล์สำหรับฟิลด์ \"{{ label }}\"",
+      "required_checkbox_error": "โปรดทำเครื่องหมายในช่องนี้หากคุณต้องการดำเนินการต่อ",
+      "required_checkbox_error_with_label": "โปรดทำเครื่องหมายที่ช่อง \"{{ label }}\" หากคุณต้องการดำเนินการต่อ",
+      "required_dropdown_error": "โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง",
+      "required_dropdown_error_with_label": "โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง \"{{ label }}\"",
+      "max_filesize_20mb": "ขนาดไฟล์สูงสุด: 20MB",
+      "max_filesize_error": "ไฟล์นี้มีขนาดใหญ่เกินไป ขนาดไฟล์สูงสุดคือ 20MB",
+      "quantity_max_error": "สินค้าทั้งหมดที่มีสำหรับ {{ variant }} ได้ถูกเพิ่มเข้าไปในตะกร้าแล้ว.",
+      "choose_an_option": "เลือกตัวเลือก",
+      "form_input": "การป้อนข้อมูลแบบฟอร์ม",
+      "email_must_be_formatted_as_an_email": "อีเมลจะต้องจัดรูปแบบเป็นอีเมล"
+    },
     "continue_shopping": "เลือกซื้อสินค้าต่อ",
     "breadcrumbs": {
       "home": "หน้าแรก",
-      "home_link_title": "กลับสู่หน้าหลัก"
+      "home_link_title": "กลับสู่หน้าหลัก",
+      "shop": "ร้านค้า"
     },
     "newsletter_form": {
       "newsletter_email": "อีเมล@example.com",
@@ -23,14 +40,14 @@
       "header_text": "ที่อยู่อีเมล:",
       "newsletter_text": "ป้อนอีเมล",
       "submit": "เข้าร่วม",
-      "thanks": "ขอบคุณที่เข้าร่วม!",
-      "newsletter_email": "อีเมลล์ลูกค้า"
+      "thanks": "ขอบคุณสำหรับการสมัครสมาชิก",
+      "newsletter_email": "อีเมลล์ลูกค้า",
+      "already_subscribed": "อีเมลได้รับการสมัครเรียบร้อยแล้ว"
     },
     "search": {
       "no_results_html": "การค้นหาของคุณสำหรับ \"{{ terms }}\" ไม่ได้ให้ผลลัพธ์ใด ๆ",
       "results_for_html": "การค้นหาของคุณสำหรับ \"{{ terms }}\" พบผลลัพธ์ต่อไปนี้:",
       "title": "ค้นหา",
-      "placeholder": "ค้นหาในร้านของเรา",
       "submit": "ค้นหา",
       "products": "สินค้า",
       "articles": "บทความ",
@@ -39,7 +56,10 @@
       "collections": "คอลเลกชัน",
       "results": "ผลลัพธ์",
       "view_all": "ดูทั้งหมด",
-      "clear": "ล้าง"
+      "clear": "ล้าง",
+      "no_results": "ไม่พบผลลัพธ์ กรุณาลองอีกครั้งด้วยคำถามอื่น",
+      "other": "อื่น",
+      "read_more": "อ่านเพิ่มเติม"
     },
     "social": {
       "share_the_love": "แชร์ความรัก"
@@ -54,11 +74,23 @@
       "add_collection": "เพิ่มคอลเลกชัน",
       "collection_title": "ชื่อคอลเลกชัน",
       "blog_title": "หัวข้อของโพสต์ของคุณ",
-      "blog_excerpt": "ร้านค้าของคุณยังไม่ได้เผยแพร่บทความใด ๆ ในขณะนี้ บทความสามารถใช้ในการพูดคุยเกี่ยวกับการเปิดตัวสินค้าใหม่ คำแนะนำ หรือข่าวสารอื่น ๆ ที่คุณต้องการแบ่งปันกับลูกค้า คุณสามารถดูบล็อกอีคอมเมิรซของ Shopify เพื่อหาระเอียดและคำแนะนำสำหรับร้านของคุณและบล็อกของคุณเอง",
-      "no_content": "ส่วนนี้ยังไม่มีเนื้อหาใด ๆ ในปัจจุบัน ให้เพิ่มเนื้อหาในส่วนนี้โดยใช้แถบข้าง"
+      "blog_post": "โพสต์บล็อก",
+      "featured_blog_posts": "บทความเด่นในบล็อก",
+      "blog_excerpt": "บล็อกสามารถใช้ในการพูดคุยเกี่ยวกับการเปิดตัวผลิตภัณฑ์ใหม่ เคล็ดลับ หรือข่าวสารอื่นๆ ที่คุณต้องการแชร์กับลูกค้าของคุณ คุณสามารถดูบล็อกอีคอมเมิร์ซของ Shopify เพื่อรับแรงบันดาลใจและคำแนะนำสำหรับร้านค้าและบล็อกของคุณเอง",
+      "blog_excerpt_alt": "จัดแสดงเนื้อหาบล็อกเด่นเพื่อแบ่งปันการเปิดตัวผลิตภัณฑ์ใหม่ เคล็ดลับ หรือข่าวสารอื่นๆ กับลูกค้าของคุณ",
+      "blog_tag_1": "เคล็ดลับ",
+      "blog_tag_2": "ข่าว",
+      "blog_author": "ผู้เขียน",
+      "no_content": "ส่วนนี้ยังไม่มีเนื้อหาใด ๆ ในปัจจุบัน ให้เพิ่มเนื้อหาในส่วนนี้โดยใช้แถบข้าง",
+      "collection": "ของสะสม",
+      "product": "ผลิตภัณฑ์",
+      "highlight_content": "ดึงดูดความสนใจไปที่คุณสมบัติโดดเด่นของผลิตภัณฑ์ของคุณ"
     },
     "verification_popup": {
       "return_text": "กลับ"
+    },
+    "video_popup": {
+      "replay": "รีเพลย์"
     },
     "localization": {
       "country_label": "ประเทศ/ภูมิภาค",
@@ -67,6 +99,7 @@
       "update_country": "อัปเดตประเทศ/ภูมิภาค"
     },
     "accessibility": {
+      "skip_to_content": "ข้ามไปยังเนื้อหา",
       "back_to_top": {
         "scroll_to_top": "เลื่อนไปที่ด้านบน"
       },
@@ -75,6 +108,15 @@
       },
       "play_icon": {
         "play_media": "เล่นสื่อ"
+      },
+      "pause_icon": {
+        "pause_media": "หยุดสื่อชั่วคราว"
+      },
+      "mute_icon": {
+        "unmute_media": "ปิดเสียงสื่อ"
+      },
+      "sound_icon": {
+        "mute_media": "ปิดเสียงสื่อ"
       },
       "quantity": {
         "increase_quantity": "เพิ่มจำนวน",
@@ -101,12 +143,22 @@
         "submit": "ส่ง"
       },
       "pagination": {
-        "previous": "ก่อนหน้า",
-        "next": "ถัดไป"
+        "page": "ไปที่หน้า {{ page }}",
+        "previous": "ไปยังหน้าก่อนหน้า",
+        "next": "ไปยังหน้าถัดไป"
       },
       "navigation": {
         "go_to_item": "ไปที่รายการ {{ number }}"
-      }
+      },
+      "video_popup": {
+        "name": "วิดีโอป๊อปอัพ",
+        "play_video": "เล่นวิดีโอ: {{ วิดีโอ }}",
+        "replay": "รีเพลย์วิดีโอ"
+      },
+      "remove_filter": "ลบตัวกรอง {{ filter }}",
+      "clear_all_filters": "ล้างตัวกรองทั้งหมด",
+      "copy": "สำเนา",
+      "before_after_slider": "ลากเพื่อเปรียบเทียบรูปภาพก่อนและหลัง"
     },
     "time": {
       "days": "วัน",
@@ -132,11 +184,13 @@
   "blogs": {
     "article": {
       "author_on_date_html": "โพสต์โดย {{ author }} เมื่อ {{ date }}",
-      "older_post": "โพสต์เก่า",
-      "newer_post": "โพสต์ใหม่",
+      "older_post": "โพสเก่ากว่า",
+      "newer_post": "โพสใหม่กว่า",
       "tags": "แท็ก",
+      "all": "ทั้งหมด",
       "comment_meta_html": "{{ author }} เมื่อ {{ date }}",
-      "read_more": "อ่านเพิ่มเติม"
+      "read_more": "อ่านเพิ่มเติม",
+      "reading_time": "{{ time }} นาทีในการอ่าน"
     },
     "comments": {
       "title": "แสดงความคิดเห็น",
@@ -154,6 +208,7 @@
     },
     "sidebar": {
       "recent_articles": "บทความล่าสุด",
+      "popular_articles": "บทความยอดนิยม",
       "categories": "หมวดหมู่"
     }
   },
@@ -161,9 +216,18 @@
     "general": {
       "title": "ตะกร้าสินค้า",
       "remove": "นำออก",
-      "note": "คำสั่งพิเศษสำหรับผู้ขาย",
+      "note": "หมายเหตุการสั่งซื้อ",
+      "add_note": "เพิ่มหมายเหตุการสั่งซื้อ",
+      "edit_note": "แก้ไขหมายเหตุการสั่งซื้อ",
+      "save_note": "บันทึกหมายเหตุการสั่งซื้อ",
+      "add_gift_note": "เพิ่มข้อความของขวัญ",
+      "edit_gift_note": "แก้ไขข้อความของขวัญ",
+      "save_gift_note": "บันทึกข้อความของขวัญ",
+      "save": "บันทึก",
       "see_more": "ดูเพิ่มเติม",
       "subtotal": "ยอดรวมส่วนหนึ่ง",
+      "regular_subtotal": "ยอดรวมย่อยปกติ",
+      "sale_subtotal": "ยอดรวมการขาย",
       "taxes_and_shipping_at_checkout": "คำนวณภาษีและค่าจัดส่งที่จุดชำระเงิน",
       "taxes_and_shipping_policy_at_checkout_html": "คำนวณภาษีและ <a href=\"{{ link }}\">ค่าจัดส่ง</a> ที่จุดชำระเงิน",
       "taxes_included_but_shipping_at_checkout": "รวมภาษีและคำนวณค่าจัดส่งที่จุดชำระเงิน",
@@ -172,7 +236,9 @@
       "checkout": "ชำระเงิน",
       "empty": "ตะกร้าของคุณว่างเปล่าในขณะนี้",
       "close_cart": "ปิดตะกร้า",
-      "savings_html": "คุณประหยัด {{ price }}"
+      "view_cart": "ดูรถเข็น",
+      "savings_html": "คุณประหยัด {{ price }}",
+      "return_to_shop": "กลับสู่ร้านค้า"
     },
     "label": {
       "product": "สินค้า",
@@ -236,7 +302,7 @@
       "clear_all": "ล้างทั้งหมด",
       "empty": "ไม่พบสินค้า",
       "from": "จาก",
-      "filter_and_sort": "กรองและเรียงลำดับ",
+      "filter_and_sort": "กรอง/เรียงลำดับ",
       "filter_by_label": "กรองโดย",
       "filter_button": "กรอง",
       "filters_selected": {
@@ -270,16 +336,46 @@
       "product_two": "สินค้าสอง",
       "product_three": "สินค้าสาม",
       "product_four": "สินค้าสี่"
+    },
+    "cross-sells": {
+      "no_metafields_title": "ไม่มีการกำหนดเมตาฟิลด์การขายแบบไขว้",
+      "no_metafields_subtitle": "โปรดทราบว่าข้อความนี้จะแสดงในตัวแก้ไขเท่านั้น",
+      "no_metafields_description_html": "กำหนดผลิตภัณฑ์แบบครอสเซลล์โดยอิงตามผลิตภัณฑ์หลักโดยสร้าง <strong>เมตาฟิลด์ผลิตภัณฑ์</strong> ที่มีเนมสเปซเป็น &quot;cross_sell&quot; และคีย์เป็น &quot;products&quot; ซึ่งต้องเป็นประเภทเนื้อหา &#39;product&#39; ที่มีการตั้งค่า &#39;List of products&#39;",
+      "learn_more": "เรียนรู้เพิ่มเติม"
+    },
+    "product_slideshow": {
+      "onboarding": "จัดแสดงผลิตภัณฑ์ด้วยการจัดแสดงภาพที่น่าสนใจ",
+      "shop_now": "ช้อปเลยตอนนี้"
+    },
+    "focused_product_gallery": {
+      "onboarding": "ดึงดูดความสนใจไปที่ผลิตภัณฑ์ที่โดดเด่น",
+      "shop_now": "ช้อปเลยตอนนี้"
+    },
+    "specification-table": {
+      "preview": {
+        "width": "ความกว้าง",
+        "treadwear": "การสึกหรอของดอกยาง",
+        "rating": "การจัดอันดับ"
+      },
+      "no_setup_title": "ไม่มีการกำหนดเมตาฟิลด์หรือคีย์",
+      "no_setup_subtitle": "โปรดทราบว่าข้อความนี้จะแสดงในตัวแก้ไขเท่านั้น",
+      "no_setup_description_html": "กำหนดค่าเมตาฟิลด์ข้อมูลจำเพาะด้วยเนมสเปซของ \"ข้อมูลจำเพาะ\" หรือ \"ข้อกำหนด\" และระบุคีย์เมตาฟิลด์ที่คุณต้องการแสดงในการตั้งค่าส่วน",
+      "learn_more": "เรียนรู้เพิ่มเติม"
+    },
+    "quiz": {
+      "start": "เริ่ม",
+      "no_results_heading": "ไม่มีแมตช์ครั้งนี้",
+      "no_results_text": "ลองปรับคำตอบของคุณหรือตรวจสอบอีกครั้งในเร็วๆ นี้"
     }
   },
   "contact": {
     "form": {
       "name": "ชื่อ",
       "email": "อีเมล",
-      "phone": "หมายเลขโทรศัพท์",
+      "phone": "เบอร์โทรศัพท์",
       "message": "ข้อความ",
       "send": "ส่ง",
-      "post_success": "ขอบคุณที่ติดต่อเรา พวกเราจะตอบกลับคุณเร็ว ๆ นี้"
+      "post_success": "ขอบคุณที่ติดต่อเรา เราจะติดต่อกลับโดยเร็วที่สุด"
     }
   },
   "customer": {
@@ -327,7 +423,8 @@
       "sign_in": "เข้าสู่ระบบ",
       "cancel": "กลับไปที่ร้านค้า",
       "guest_title": "ดำเนินการในฐานะผู้เยี่ยมชม",
-      "guest_continue": "ดำเนินการต่อ"
+      "guest_continue": "ดำเนินการต่อ",
+      "alternate_provider_separator": "หรือ"
     },
     "orders": {
       "title": "ประวัติการสั่งซื้อ",
@@ -428,8 +525,10 @@
       "search": "ค้นหา",
       "account": "บัญชี",
       "your_cart": "รถเข็น",
+      "offers_drawer": "ลิ้นชักเสนอ",
       "currency": "สกุลเงิน",
-      "language": "ภาษา"
+      "language": "ภาษา",
+      "mega_menu_empty": "เมนูขนาดใหญ่นี้ไม่มีเนื้อหาใดๆ ในขณะนี้ เพิ่มเนื้อหาลงในเมนูขนาดใหญ่ในส่วนดูแลระบบ Shopify ได้ที่: ร้านค้าออนไลน์ > เมนู"
     }
   },
   "products": {
@@ -444,10 +543,18 @@
       "giftwrap_label": "ห่อของขวัญ",
       "giftwrap_note": "ข้อความของขวัญ",
       "giftwrap_note_placeholder": "เพิ่มข้อความของขวัญของคุณที่นี่",
-      "from_text_html": "จาก {{ price }}"
+      "from_text_html": "จาก {{ price }}",
+      "file_upload_html": "ลากและวางหรือ <a aria-label=\"browse\" href=\"#\" onclick=\"event.preventDefault();\">เรียกดู</a> ไฟล์ที่จะอัปโหลด",
+      "file_upload_browse_html": "<a aria-label=\"Browse\" href=\"#\" onclick=\"event.preventDefault();\">เรียกดู</a> ไฟล์ที่จะอัปโหลด",
+      "add_product_to_cart": "เพิ่ม {{ product }} ลงในตะกร้า",
+      "product_added_to_cart": "เพิ่ม {{ product }} ลงในตะกร้าแล้ว",
+      "preorder_product": "สั่งซื้อล่วงหน้า {{ สินค้า }}",
+      "view_options_for_product": "ดูตัวเลือกสำหรับ {{ product }}",
+      "view_details": "ดูรายละเอียด"
     },
     "product": {
       "sold_out": "หมด",
+      "preorder": "สั่งของล่วงหน้า",
       "on_sale": "ลดราคา",
       "on_sale_from_html": "ลดราคาจาก {{ price }}",
       "sale": "ขายส่ง",
@@ -469,11 +576,12 @@
       "include_taxes": "ราคารวมภาษี",
       "shipping_policy_html": "<a href=\"{{ link }}\">ค่าขนส่ง</a> คำนวณที่จุดจ่ายเงิน",
       "quote": "ข้อคิด",
+      "preorder_today": "สั่งซื้อล่วงหน้าวันนี้",
       "in_stock": "มีสินค้า",
       "low_stock": "สินค้าหมดใกล้หมด",
       "out_of_stock": "สินค้าหมด",
       "stock_left": "ชิ้นเหลือ",
-      "out_of_stock_html": "คลิก <a href=\"#\"><strong>ที่นี่</strong></a> เพื่อรับข้อมูลเมื่อ {{ product }} มีจำหน่ายอีกครั้งทางอีเมล",
+      "out_of_stock_html": "คลิก <a href=\"#\"><strong>ที่นี่</strong></a> เพื่อรับข้อมูลเมื่อ {{ product }} - {{ variant }} มีจำหน่ายอีกครั้งทางอีเมล",
       "wrong_email": "โปรดระบุที่อยู่อีเมลที่ถูกต้อง",
       "out_of_stock_success": "ขอบคุณ! เราจะแจ้งให้คุณทราบเมื่อสินค้านี้มีจำหน่ายอีกครั้ง!",
       "read_more_html": "อ่านเพิ่มเติม",
@@ -492,6 +600,7 @@
     "general": {
       "view_store_info": "ดูข้อมูลร้านค้า",
       "check_other_stores": "ตรวจสอบความพร้อมใช้งานที่ร้านค้าอื่น",
+      "pickup_availability": "ความพร้อมในการรับสินค้า",
       "pick_up_available": "รับสินค้าที่ร้านได้",
       "pick_up_currently_unavailable": "การรับสินค้าไม่พร้อมใช้งานในปัจจุบัน",
       "pick_up_available_at_html": "สามารถรับสินค้าที่ {{ location_name }} ได้",
@@ -500,15 +609,21 @@
   },
   "gift_cards": {
     "issued": {
-      "title": "นี่คือบัตรของขวัญ {{ value }} ของคุณสำหรับ {{ shop }}!",
-      "subtext": "นี่คือบัตรของขวัญของคุณ!",
+      "heading": "นี่คือบัตรของขวัญของคุณ!",
+      "heading_guest": "นี่คือบัตรของขวัญของคุณ {{ customer }}!",
+      "heading_print": "นี่คือบัตรของขวัญของคุณสำหรับ {{ shop_name }}!",
       "disabled": "ปิดใช้งาน",
-      "expired": "หมดอายุเมื่อ {{ expiry }}",
-      "active": "หมดอายุเมื่อ {{ expiry }}",
-      "redeem": "ใช้รหัสนี้ที่ช่องจ่ายเงินเพื่อแลกรางวัลของคุณ",
+      "expired": "หมดอายุแล้ว",
+      "expires": "หมดอายุ",
+      "redeem": "ใช้รหัสนี้เพื่อแลกรับบัตรของขวัญของคุณเมื่อชำระเงิน",
       "shop_link": "เริ่มช้อปปิ้ง",
       "print": "พิมพ์",
-      "add_to_apple_wallet": "เพิ่มลงในกระเป๋าเงิน Apple"
+      "add_to_apple_wallet": "เพิ่มลงในกระเป๋าเงิน Apple",
+      "balance": "สมดุล",
+      "copy": "สำเนา",
+      "placeholder_expiry_date": "12.3.28",
+      "qr_code_text": "หรือ QR Code ในร้านค้า:",
+      "qr_image_alt": "รหัส QR — สแกนเพื่อแลกรับบัตรของขวัญ"
     },
     "recipient": {
       "checkbox": "ฉันต้องการส่งนี้เป็นของขวัญ",
@@ -525,6 +640,7 @@
       "thanks_mailing": "ขอบคุณที่ลงชื่อเข้าร่วม!",
       "find_out": "ค้นพบเมื่อเราเปิดร้าน",
       "password": "เข้าสู่ร้านโดยใช้รหัสผ่าน",
+      "enter_password": "กรอกรหัสผ่าน",
       "store_owner": "คุณเป็นเจ้าของร้านหรือไม่?",
       "store_owner_html": "<a href=\"/admin\">เข้าสู่ระบบที่นี่</a>",
       "continue": "ดำเนินการต่อ",

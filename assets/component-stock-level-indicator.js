@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 
 class StockLevelIndicator extends HTMLElement {
   constructor() {
@@ -12,7 +11,6 @@ class StockLevelIndicator extends HTMLElement {
 
   attributeChangedCallback(attribute, oldVal, newVal) {
     if(!oldVal || oldVal === newVal) return;
-    this.setActiveIndicator(newVal);
   }
 
   connectedCallback() {
@@ -30,20 +28,9 @@ class StockLevelIndicator extends HTMLElement {
       observer.unobserve(entry[0].target);
     }
   }
-
-  setActiveIndicator(variantId) {
-    const indicators = this.querySelectorAll('[data-flow-selector="stock-level-indicator"]');
-    indicators.forEach(indicator => {
-      if (variantId == indicator.dataset.variantId) {
-        indicator.classList.remove('hidden');
-      } else {
-        indicator.classList.add('hidden');
-      }
-    });
-  }
 }
 
-customElements.define('stock-level-indicator', StockLevelIndicator);
+if (!customElements.get('stock-level-indicator')) customElements.define('stock-level-indicator', StockLevelIndicator);
 
 /******/ })()
 ;

@@ -5,12 +5,14 @@
 
   {% if custom_icon %}
     {% if link %}
-      <a href={{ link }} class="text-with-icon--icon link">
+      <a href={{ link }} {% if text == blank %}aria-label="Custom icon. Link to {{ link }}" {% endif %}class="text-with-icon--icon link"{% if link_attr %} {{ link_attr }}{% endif %}>
     {% else %}
       <span class="text-with-icon--icon">
     {% endif %}
 
-      {% render 'responsive-image' with icon, default_size: iconSize | append: 'x', blur: false %}
+      <div style="width:{{ iconSize }}px;">
+        {% render 'responsive-image' with icon, default_size: iconSize | append: 'x', blur: false %}
+      </div>
 
     {% if link %}
       </a>
@@ -20,7 +22,7 @@
   {% else %}
     {% unless icon == 'none' %}
       {% if link %}
-        <a href={{ link }} class="text-with-icon--icon link">
+        <a href={{ link }} {% if text == blank %}aria-label="Icon of a {{ icon }}. Link to {{ link }}" {% endif %}class="text-with-icon--icon link"{% if link_attr %} {{ link_attr }}{% endif %}>
       {% else %}
         <span class="text-with-icon--icon inline-icon--wrapper">
       {% endif %}
@@ -35,17 +37,19 @@
     {% endunless %}
   {% endif %}
 
-  <span class="text-with-icon--text{% if link %} nav-link-animated--custom{% endif %}{% if text_classes %} {{ text_classes }}{% endif %}">
-    {% if link %}
-      <a href={{ link }} class="link animated-link--item">
-    {% endif %}
+  {% if text != blank %}
+    <span class="text-with-icon--text{% if link %} nav-link-animated--custom{% endif %}{% if text_classes %} {{ text_classes }}{% endif %}">
+      {% if link %}
+        <a href={{ link }} class="link animated-link--item"{% if link_attr %} {{ link_attr }}{% endif %}>
+      {% endif %}
 
-      {{ text }}
-    
-    {% if link %}
-      </a>
-    {% endif %}
-  </span>
+        {{ text }}
+      
+      {% if link %}
+        </a>
+      {% endif %}
+    </span>
+  {% endif %}
 
   </div>
 </div>

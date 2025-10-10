@@ -34,7 +34,11 @@
 
   endif
 
-  assign currency_price = price_amount | times: 100 | money_without_currency | prepend: localization.country.currency.symbol
+  if settings.show_currency_code
+    assign currency_price = price_amount | times: 100 | money_with_currency
+  else
+    assign currency_price = price_amount | times: 100 | money_without_currency | prepend: localization.country.currency.symbol
+  endif
 
 -%}
 

@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 class CountdownTimer extends HTMLElement {
   constructor() {
     super();

@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 class CollapsibleButton extends HTMLElement {
   constructor() {
     super();
@@ -18,7 +17,7 @@ class CollapsibleButton extends HTMLElement {
     if(this.nextElementSibling.classList.contains('collapsible-content') && this.parentElement.classList.contains('collapsible-tab')) {
 
       // Set initial height based on state
-      this.parentElement.classList.contains('open') ? this.nextElementSibling.style.height = this.contentBlockheight() : this.nextElementSibling.style.height = '0px';
+      this.parentElement.classList.contains('open') ? this.nextElementSibling.style.height = 'fit-content' : this.nextElementSibling.style.height = '0px';
 
       // Handle click
       this.addEventListener('click', this.toggle);
@@ -35,6 +34,24 @@ class CollapsibleButton extends HTMLElement {
 
       // Handle collapsible tab content size change
       this.nextElementSibling.addEventListener('click', this.resetHeight.bind(this));
+
+      // Handle Shopify theme editor events
+      document.addEventListener('shopify:block:select', (event) => {
+        // If it's open by default, return
+        if (this.parentElement.dataset.openByDefault === 'true') return;
+        // If the selected block is the same as this block, show details
+        this.blockId = this.dataset.blockId;
+        if (this.blockId && event.detail.blockId === this.blockId) {
+          this.showDetails();
+        }
+      });
+
+      document.addEventListener('shopify:block:deselect', () => {
+        // If it's open by default, return
+        if (this.parentElement.dataset.openByDefault === 'true') return;
+        // If the selected block is the same as this block, hide details
+        this.hideDetails();
+      });
     }
   }
 
@@ -92,7 +109,6 @@ class CollapsibleButton extends HTMLElement {
       this.throttleTimer = false;
     }, time);
   }
-
 }
 
 // Only define the custom element if it doesn't already exist

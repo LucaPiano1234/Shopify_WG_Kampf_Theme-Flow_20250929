@@ -2,14 +2,6 @@
   assign menu = linklists[section.settings.main_linklist]
 %}
 
-{% if settings.header-border-color != 'rgba(0,0,0,0)' %}
-  {% style %}
-    .site-nav__dropdown.mega-menu-dropdown {
-      top: calc(100% + 1px);
-    }
-  {% endstyle %}
-{% endif %}
-
 {% for link in menu.links %}
 
   {% if link.links != blank %}
@@ -135,3 +127,11 @@
     </li>
   {% endif %}
 {% endfor %}
+
+{% if settings.header-border-color != 'rgba(0,0,0,0)' %}
+  {% style %}
+    .site-nav__dropdown.mega-menu-dropdown {
+      top: calc(100% + 1px);
+    }
+  {% endstyle %}
+{% endif %}

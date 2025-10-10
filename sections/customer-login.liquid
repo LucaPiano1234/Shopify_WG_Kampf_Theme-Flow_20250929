@@ -1,9 +1,15 @@
 <!-- /sections/customer-login.liquid -->
 
-<div class="wrapper-padded">
+{{ 'template-customer-accounts.min.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% if section.settings.enable_shop_login_button == false %}
+  {% assign hide_shop_login_button = true %}
+{% endif %}
+
+<div class="wrapper-spacing--v--template wrapper-spacing--h">
   <div class="grid page-main--wrapper">
 
-    <div class="grid__item large--one-third push--large--one-third text-center">
+    <div class="grid__item grid__item--customer-accounts large--one-third push--large--one-third text-center">
       <div class="note form-success" id="ResetSuccess" style="display:none;">
         {{ 'customer.recover_password.success' | t }}
       </div>
@@ -11,15 +17,30 @@
       <div id="CustomerLoginForm" class="form-vertical">
         {% form 'customer_login' %}
 
-          <div class="sitewide--title-wrapper">
+          <div class="template-title--wrapper">
 
-            <h1 class="page--title">{{ 'customer.login.title' | t }}</h1>
+            <h1 class="page--title template-title">{{ 'customer.login.title' | t }}</h1>
           </div>
 
-          {{ form.errors | default_errors }}
+          <div role="alert">
+            {{ form.errors | default_errors }}
+          </div>
+
+          <!-- Sign in with Shop button -->
+          {% if shop.features.login_with_shop_classic_customer_accounts? %}
+            <div class="customer-login--sign-in-with-shop">
+              {{ shop | login_button: hide_button: hide_shop_login_button }}
+    
+              {% unless hide_shop_login_button %}
+                <p>
+                  {{ 'customer.login.alternate_provider_separator' | t }}
+                </p>
+              {% endunless %}
+            </div>
+          {% endif %}
 
           <label for="CustomerEmail" class="hidden-label">{{ 'customer.login.email' | t }}</label>
-          <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" placeholder="{{ 'customer.login.email' | t }}" autocorrect="off" autocapitalize="off" ref="customerEmail" autofocus>
+          <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" placeholder="{{ 'customer.login.email' | t }}" autocorrect="off" autocapitalize="off" ref="customerEmail" autofocus pattern=".+@.+\..+" title="{{ 'general.forms.email_must_be_formatted_as_an_email' | t }}">
 
           {% if form.password_needed %}
             <label for="CustomerPassword" class="hidden-label">{{ 'customer.login.password' | t }}</label>
@@ -88,7 +109,12 @@
 {
   "name": "t:sections.customer-login.name",
   "settings": [
-
+    {
+      "type": "checkbox",
+      "id": "enable_shop_login_button",
+      "label": "t:sections.customer-login.settings.enable_shop_login_button",
+      "default": true
+    }
   ]
 }
 {% endschema %}

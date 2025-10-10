@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
 class animatedText extends HTMLElement {
   constructor() {
     super();
@@ -7,12 +6,17 @@ class animatedText extends HTMLElement {
     this.dynamicWords = this.querySelectorAll('.text-wrap');
     this.itemIndex = 0;
     this.interval = this.dataset.animationDelay;
+    this.classToggler = this.classToggler.bind(this);
   }
 
   connectedCallback() {
     this.setWidth(this, this.width);
     this.dynamicWords.length > 1 ? this.itemIndex = 1 : this.itemIndex = 0;
     this.init();
+
+    if (window.Shopify.designMode) {
+      window.addEventListener('resize', this.classToggler);
+    }
   }
 
   init() {
@@ -51,6 +55,12 @@ class animatedText extends HTMLElement {
       }
     } else {
       this.itemIndex = 0;
+    }
+  }
+
+  disconnectedCallback() {
+    if (window.Shopify.designMode) {
+      window.removeEventListener('resize', this.classToggler);
     }
   }
 }

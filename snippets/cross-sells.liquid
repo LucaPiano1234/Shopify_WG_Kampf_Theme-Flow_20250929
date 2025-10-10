@@ -20,7 +20,21 @@
         {% if cross_sells_products.size > 3 %}<scrollable-container class="top">{% endif %}
           {%- for cross_sells_product in cross_sells_products -%}
             {%- unless cross_sells_product == blank -%}
-              {% render 'product-cross-sell', product_id: cross_sells_product, index: forloop.index0 %}
+              {%- assign preorder_product = false -%}
+              {%- if all_products[cross_sells_product].tags contains 'preorder' -%}
+                {%- assign preorder_product = true -%}
+              {%- endif -%}
+              {% liquid
+                assign preorder_string = 'products.product.preorder' | t | downcase
+                assign preorder_product = false
+                for tag in all_products[cross_sells_product].tags
+                  assign lowecase_tag = tag | downcase
+                  if lowecase_tag contains preorder_string
+                    assign preorder_product = true
+                  endif
+                endfor
+              %}
+              {% render 'product-cross-sell', product_id: cross_sells_product, index: forloop.index0, preorder_product: preorder_product %}
             {%- endunless -%}
           {%- endfor -%}
         {% if cross_sells_products.size > 3 %}</scrollable-container>{% endif %}

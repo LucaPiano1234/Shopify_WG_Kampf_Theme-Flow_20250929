@@ -25,15 +25,20 @@
   {% elsif template contains 'collection' and collection.handle %}
 
     <span class="breadcrumb-divider" aria-hidden="true">/</span>
-    {% if current_tags %}
-      <span class="breadcrumb-item">
-        <a class="animated-link--item" href="{{ collection.url }}" title="{{ collection.title }}">
-          <span class="label-font">{{ collection.title }}</span>
-        </a>
-      </span>
-      <span class="breadcrumb-divider" aria-hidden="true">/</span>
-      <span class="breadcrumb-item">{{ current_tags | join: " + " }}</span>
-    {% endif %}
+
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ routes.all_products_collection_url }}">
+        <span class="label-font">{{ 'general.breadcrumbs.shop' | t }}</span>
+      </a>
+    </span>
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ collection.url }}" title="{{ collection.title }}">
+        <span class="label-font">{{ collection.title }}</span>
+      </a>
+    </span>
 
   {% elsif template.name == 'blog' %}
 
@@ -57,6 +62,9 @@
       </a>
     </span>
     <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    <span class="breadcrumb-item">
+      <span class="label-font">{{ article.title }}</span>
+    </span>
 
   {% elsif template contains 'page' %}
 
