@@ -1,53 +1,36 @@
 {
   "general": {
-    "404": {
-      "title": "404 頁面未找到",
-      "subtext_html": "您請求的頁面不存在。"
-    },
     "meta": {
       "tags": "標記為 \"{{ tags }}\"",
       "page": "第 {{ page }} 頁"
     },
-    "forms": {
-      "required_input_error": "请填写此字段。",
-      "required_input_error_with_label": "请填写“{{ label }}”字段。",
-      "required_upload_error": "请上传文件。",
-      "required_upload_error_with_label": "请为“{{ label }}”字段上传文件。",
-      "required_checkbox_error": "如果您想继续，请选中此框。",
-      "required_checkbox_error_with_label": "如果您想继续，请选中“{{ label }}”框。",
-      "required_dropdown_error": "请从下拉菜单中选择一个选项。",
-      "required_dropdown_error_with_label": "请从“{{ 标签 }}”下拉菜单中选择一个选项。",
-      "max_filesize_20mb": "最大文件大小：20MB。",
-      "max_filesize_error": "此文件太大。最大文件大小为 20MB。",
-      "quantity_max_error": "所有可用的{{ variant }}庫存已加入購物車。",
-      "choose_an_option": "选择一个选项",
-      "form_input": "表单输入",
-      "email_must_be_formatted_as_an_email": "电子邮件必须格式化为电子邮件。"
+    "404": {
+      "title": "404 頁面未找到",
+      "subtext_html": "您請求的頁面不存在。"
     },
     "continue_shopping": "繼續購物",
     "breadcrumbs": {
       "home": "首頁",
-      "home_link_title": "返回首頁",
-      "shop": "商店"
+      "home_link_title": "返回首頁"
     },
     "newsletter_form": {
       "newsletter_email": "email@example.com",
       "submit": "訂閱",
-      "confirmation": "感谢订阅"
+      "confirmation": "感謝您的訂閱"
     },
     "newsletter_form_section": {
       "header": "加入我們的郵件列表",
       "header_text": "電子郵件地址：",
       "newsletter_text": "輸入電子郵件",
       "submit": "加入",
-      "thanks": "感谢订阅",
-      "newsletter_email": "客戶電子郵件",
-      "already_subscribed": "已订阅电子邮件"
+      "thanks": "感謝您的加入！",
+      "newsletter_email": "客戶電子郵件"
     },
     "search": {
       "no_results_html": "您的搜尋 \"{{ terms }}\" 沒有任何結果。",
       "results_for_html": "您的搜尋 \"{{ terms }}\" 顯示以下內容：",
       "title": "搜尋",
+      "placeholder": "搜尋我們的商店",
       "submit": "搜尋",
       "products": "產品",
       "articles": "文章",
@@ -56,10 +39,7 @@
       "collections": "收藏",
       "results": "結果",
       "view_all": "查看所有結果",
-      "clear": "清除",
-      "no_results": "未找到结果。请使用其他查询重试。",
-      "other": "其他",
-      "read_more": "阅读更多"
+      "clear": "清除"
     },
     "social": {
       "share_the_love": "分享愛"
@@ -74,23 +54,11 @@
       "add_collection": "添加收藏",
       "collection_title": "收藏名稱",
       "blog_title": "您的文章標題",
-      "blog_post": "博客文章",
-      "featured_blog_posts": "精选博客文章",
-      "blog_excerpt": "博客可用于讨论新产品发布、技巧或您想与客户分享的其他新闻。您可以查看 Shopify 的电子商务博客，获取有关您自己的商店和博客的灵感和建议。",
-      "blog_excerpt_alt": "展示特色博客内容，与您的客户分享新产品发布、提示或其他新闻。",
-      "blog_tag_1": "尖端",
-      "blog_tag_2": "消息",
-      "blog_author": "作者",
-      "no_content": "此部分目前不包含任何內容。使用側欄添加內容到此部分。",
-      "collection": "收藏",
-      "product": "产品",
-      "highlight_content": "吸引人们关注您产品的突出特点。"
+      "blog_excerpt": "您的商店尚未發布任何博客文章。博客可用於討論新產品推出、提示或其他您希望與顧客分享的消息。您可以查看Shopify的電子商務博客以獲得有關您自己的商店和博客的靈感和建議。",
+      "no_content": "此部分目前不包含任何內容。使用側欄添加內容到此部分。"
     },
     "verification_popup": {
       "return_text": "返回"
-    },
-    "video_popup": {
-      "replay": "重播"
     },
     "localization": {
       "country_label": "國家/地區",
@@ -99,7 +67,6 @@
       "update_country": "更新國家/地區"
     },
     "accessibility": {
-      "skip_to_content": "跳至内容",
       "back_to_top": {
         "scroll_to_top": "滾動到頁面頂部"
       },
@@ -108,15 +75,6 @@
       },
       "play_icon": {
         "play_media": "播放媒體"
-      },
-      "pause_icon": {
-        "pause_media": "暂停媒体"
-      },
-      "mute_icon": {
-        "unmute_media": "取消媒体静音"
-      },
-      "sound_icon": {
-        "mute_media": "静音媒体"
       },
       "quantity": {
         "increase_quantity": "增加數量",
@@ -143,22 +101,12 @@
         "submit": "提交"
       },
       "pagination": {
-        "page": "转至第 {{ page }} 页",
-        "previous": "转至上一页",
-        "next": "转至下一页"
+        "previous": "上一頁",
+        "next": "下一頁"
       },
       "navigation": {
         "go_to_item": "前往項目 {{ number }}"
-      },
-      "video_popup": {
-        "name": "视频弹出窗口",
-        "play_video": "播放视频：{{ video }}",
-        "replay": "重播视频"
-      },
-      "remove_filter": "删除过滤器 {{ filter }}",
-      "clear_all_filters": "清除所有筛选条件",
-      "copy": "复制",
-      "before_after_slider": "拖动以比较前后图像"
+      }
     },
     "time": {
       "days": "天",
@@ -184,13 +132,11 @@
   "blogs": {
     "article": {
       "author_on_date_html": "由 {{ author }} 於 {{ date }} 張貼",
-      "older_post": "旧帖",
-      "newer_post": "较新的帖子",
+      "older_post": "較早的文章",
+      "newer_post": "較新的文章",
       "tags": "標籤",
-      "all": "全部",
       "comment_meta_html": "{{ author }} 於 {{ date }} 發表",
-      "read_more": "閱讀更多",
-      "reading_time": "阅读时间：{{ time }} 分钟"
+      "read_more": "閱讀更多"
     },
     "comments": {
       "title": "留下評論",
@@ -208,7 +154,6 @@
     },
     "sidebar": {
       "recent_articles": "最新文章",
-      "popular_articles": "热门文章",
       "categories": "分類"
     }
   },
@@ -216,18 +161,9 @@
     "general": {
       "title": "購物車",
       "remove": "移除",
-      "note": "订单备注",
-      "add_note": "添加订单备注",
-      "edit_note": "编辑订单备注",
-      "save_note": "保存订单备注",
-      "add_gift_note": "添加礼物留言",
-      "edit_gift_note": "编辑礼物讯息",
-      "save_gift_note": "保存礼品讯息",
-      "save": "节省",
+      "note": "賣家特殊備註",
       "see_more": "查看更多",
       "subtotal": "小計",
-      "regular_subtotal": "常规小计",
-      "sale_subtotal": "销售小计",
       "taxes_and_shipping_at_checkout": "稅金和運費將在結帳時計算",
       "taxes_and_shipping_policy_at_checkout_html": "稅金和<a href=\"{{ link }}\">運費</a>將在結帳時計算",
       "taxes_included_but_shipping_at_checkout": "已包含稅金，運費將在結帳時計算",
@@ -236,9 +172,7 @@
       "checkout": "結帳",
       "empty": "您的購物車目前是空的。",
       "close_cart": "關閉購物車",
-      "view_cart": "查看购物车",
-      "savings_html": "您正在節省{{ price }}",
-      "return_to_shop": "返回商店"
+      "savings_html": "您正在節省{{ price }}"
     },
     "label": {
       "product": "產品",
@@ -302,7 +236,7 @@
       "clear_all": "全部清除",
       "empty": "未找到產品",
       "from": "從",
-      "filter_and_sort": "过滤/排序",
+      "filter_and_sort": "篩選和排序",
       "filter_by_label": "篩選方式",
       "filter_button": "篩選",
       "filters_selected": {
@@ -336,46 +270,16 @@
       "product_two": "產品二",
       "product_three": "產品三",
       "product_four": "產品四"
-    },
-    "cross-sells": {
-      "no_metafields_title": "未分配交叉销售元字段",
-      "no_metafields_subtitle": "请注意，此消息仅显示在编辑器中。",
-      "no_metafields_description_html": "通过创建命名空间为“cross_sell”、键为“products”的<strong>产品元字段</strong>，根据主产品分配交叉销售产品。这需要使用“product”内容类型，并设置“产品列表”。",
-      "learn_more": "了解更多"
-    },
-    "product_slideshow": {
-      "onboarding": "通过引人入胜的视觉展示来展示产品。",
-      "shop_now": "立即购买"
-    },
-    "focused_product_gallery": {
-      "onboarding": "吸引注意力到特色产品上。",
-      "shop_now": "立即购买"
-    },
-    "specification-table": {
-      "preview": {
-        "width": "宽度",
-        "treadwear": "胎面磨损",
-        "rating": "等级"
-      },
-      "no_setup_title": "未配置规范元字段或键",
-      "no_setup_subtitle": "请注意，此消息仅显示在编辑器中。",
-      "no_setup_description_html": "使用“specifications”或“specification”命名空间配置规范元字段，并在部分设置中指定要显示的元字段键。",
-      "learn_more": "了解更多"
-    },
-    "quiz": {
-      "start": "开始",
-      "no_results_heading": "本次没有匹配。",
-      "no_results_text": "尝试调整您的答案或稍后再回来查看。"
     }
   },
   "contact": {
     "form": {
       "name": "姓名",
-      "email": "电子邮件",
-      "phone": "电话号码",
-      "message": "信息",
-      "send": "发送",
-      "post_success": "感谢您联系我们。我们将尽快回复您。"
+      "email": "電子郵件",
+      "phone": "電話號碼",
+      "message": "留言",
+      "send": "發送",
+      "post_success": "感謝您聯絡我們。我們將儘快回覆您。"
     }
   },
   "customer": {
@@ -395,7 +299,7 @@
     },
     "addresses": {
       "title": "您的地址",
-      "default": "默认",
+      "default": "預設",
       "add_new": "新增地址",
       "edit_address": "編輯地址",
       "first_name": "名字",
@@ -423,8 +327,7 @@
       "sign_in": "登入",
       "cancel": "返回商店",
       "guest_title": "以訪客身份繼續",
-      "guest_continue": "繼續",
-      "alternate_provider_separator": "或者"
+      "guest_continue": "繼續"
     },
     "orders": {
       "title": "訂單記錄",
@@ -525,10 +428,8 @@
       "search": "搜尋",
       "account": "帳戶",
       "your_cart": "購物車",
-      "offers_drawer": "优惠抽屉",
       "currency": "貨幣",
-      "language": "語言",
-      "mega_menu_empty": "此大型菜单目前没有任何内容。在 Shopify 管理中心的大型菜单中，通过以下方式添加内容：在线商店 > 菜单。"
+      "language": "語言"
     }
   },
   "products": {
@@ -543,18 +444,10 @@
       "giftwrap_label": "禮品包裝",
       "giftwrap_note": "禮品留言",
       "giftwrap_note_placeholder": "在這裡加入您的禮品留言",
-      "from_text_html": "從 {{ price }} 開始",
-      "file_upload_html": "拖放或<a aria-label=\"browse\" href=\"#\" onclick=\"event.preventDefault();\">浏览</a>要上传的文件",
-      "file_upload_browse_html": "<a aria-label=\"Browse\" href=\"#\" onclick=\"event.preventDefault();\">浏览</a>要上传的文件",
-      "add_product_to_cart": "将 {{ product }} 添加至购物车",
-      "product_added_to_cart": "{{ product }} 已添加到购物车",
-      "preorder_product": "预订 {{ product }}",
-      "view_options_for_product": "查看 {{ product }} 的选项",
-      "view_details": "查看详细信息"
+      "from_text_html": "從 {{ price }} 開始"
     },
     "product": {
       "sold_out": "售罄",
-      "preorder": "预购",
       "on_sale": "特價中",
       "on_sale_from_html": "特價價格由 {{ price }} 起",
       "sale": "特價",
@@ -576,12 +469,11 @@
       "include_taxes": "已含稅。",
       "shipping_policy_html": "<a href=\"{{ link }}\">運費</a>將在結帳時計算。",
       "quote": "報價",
-      "preorder_today": "立即预订",
       "in_stock": "現貨",
       "low_stock": "庫存不足",
       "out_of_stock": "缺貨",
       "stock_left": "庫存剩餘",
-      "out_of_stock_html": "單擊<a href=\"#\"><strong>這裡</strong></a>以在{{ product }} - {{ variant }} 可用時通過電子郵件通知您。",
+      "out_of_stock_html": "單擊<a href=\"#\"><strong>這裡</strong></a>以在{{ product }}可用時通過電子郵件通知您。",
       "wrong_email": "請提供有效的電子郵件地址。",
       "out_of_stock_success": "謝謝！我們將在此產品可用時通知您！",
       "read_more_html": "閱讀更多",
@@ -600,7 +492,6 @@
     "general": {
       "view_store_info": "查看商店信息",
       "check_other_stores": "檢查其他商店的供應情況",
-      "pickup_availability": "取货情况",
       "pick_up_available": "提取可用",
       "pick_up_currently_unavailable": "目前無法提取",
       "pick_up_available_at_html": "可在{{ location_name }}提取",
@@ -609,21 +500,15 @@
   },
   "gift_cards": {
     "issued": {
-      "heading": "这是您的礼品卡！",
-      "heading_guest": "这是您的礼品卡 {{ customer }}！",
-      "heading_print": "这是您的 {{ shop_name }} 礼品卡！",
+      "title": "這是您的價值 {{ value }} 的 {{ shop }} 代金券！",
+      "subtext": "這是您的代金券！",
       "disabled": "已停用",
-      "expired": "已到期",
-      "expires": "过期",
-      "redeem": "使用此代码在结账时兑换您的礼品卡",
+      "expired": "於 {{ expiry }} 過期",
+      "active": "於 {{ expiry }} 過期",
+      "redeem": "在結帳時使用此代碼來兌換您的代金券",
       "shop_link": "開始購物",
       "print": "列印",
-      "add_to_apple_wallet": "添加到Apple Wallet",
-      "balance": "平衡",
-      "copy": "复制",
-      "placeholder_expiry_date": "12.3.28",
-      "qr_code_text": "或到店内扫二维码：",
-      "qr_image_alt": "QR 码 — 扫描即可兑换礼品卡"
+      "add_to_apple_wallet": "添加到Apple Wallet"
     },
     "recipient": {
       "checkbox": "我想將此作為禮物送出",
@@ -640,7 +525,6 @@
       "thanks_mailing": "感謝您的註冊！",
       "find_out": "了解我們何時開放",
       "password": "輸入密碼進入商店",
-      "enter_password": "输入密码",
       "store_owner": "您是商店擁有者嗎？",
       "store_owner_html": "<a href=\"/admin\">在這裡登入</a>",
       "continue": "繼續",

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
 /* Scripts that aren't compiled to theme.js don't execute unless changes are saved
 in the theme editor, this aims to resolve the issue by finding and adding them
 once a section/block is added */

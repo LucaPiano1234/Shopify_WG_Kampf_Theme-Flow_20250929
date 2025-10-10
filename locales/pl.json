@@ -1,53 +1,36 @@
 {
   "general": {
-    "404": {
-      "title": "404 Strona nie znaleziona",
-      "subtext_html": "Strona, którą chciałeś odwiedzić, nie istnieje."
-    },
     "meta": {
       "tags": "Oznaczone jako \"{{ tags }}\"",
       "page": "Strona {{ page }}"
     },
-    "forms": {
-      "required_input_error": "Proszę wypełnić to pole.",
-      "required_input_error_with_label": "Wypełnij pole „{{ label }}”.",
-      "required_upload_error": "Proszę przesłać plik.",
-      "required_upload_error_with_label": "Prześlij plik dla pola „{{ label }}”.",
-      "required_checkbox_error": "Zaznacz to pole, jeśli chcesz kontynuować.",
-      "required_checkbox_error_with_label": "Jeśli chcesz kontynuować, zaznacz pole „{{ label }}”.",
-      "required_dropdown_error": "Wybierz opcję z menu rozwijanego.",
-      "required_dropdown_error_with_label": "Wybierz opcję z menu rozwijanego „{{ label }}”.",
-      "max_filesize_20mb": "Maksymalny rozmiar pliku: 20MB.",
-      "max_filesize_error": "Ten plik jest za duży. Maksymalny rozmiar pliku to 20 MB.",
-      "quantity_max_error": "Cały dostępny zapas dla {{ variant }} został dodany do koszyka.",
-      "choose_an_option": "Wybierz opcję",
-      "form_input": "Wprowadzanie formularza",
-      "email_must_be_formatted_as_an_email": "Wiadomość e-mail musi być sformatowana jako wiadomość e-mail."
+    "404": {
+      "title": "404 Strona nie znaleziona",
+      "subtext_html": "Strona, którą chciałeś odwiedzić, nie istnieje."
     },
     "continue_shopping": "Kontynuuj zakupy",
     "breadcrumbs": {
       "home": "Strona główna",
-      "home_link_title": "Powrót do strony głównej",
-      "shop": "Sklep"
+      "home_link_title": "Powrót do strony głównej"
     },
     "newsletter_form": {
       "newsletter_email": "email@example.com",
       "submit": "Zapisz się",
-      "confirmation": "Dziękujemy za subskrypcję"
+      "confirmation": "Dziękujemy za zapisanie się"
     },
     "newsletter_form_section": {
       "header": "Dołącz do naszej listy mailingowej",
       "header_text": "Adres e-mail:",
       "newsletter_text": "Wprowadź adres e-mail",
       "submit": "Dołącz",
-      "thanks": "Dziękujemy za subskrypcję",
-      "newsletter_email": "E-mail klienta",
-      "already_subscribed": "E-mail już zapisany"
+      "thanks": "Dziękujemy za dołączenie!",
+      "newsletter_email": "E-mail klienta"
     },
     "search": {
       "no_results_html": "Twoje wyszukiwanie dla \"{{ terms }}\" nie przyniosło żadnych wyników.",
       "results_for_html": "Twoje wyszukiwanie dla \"{{ terms }}\" ujawniło następujące wyniki:",
       "title": "Szukaj",
+      "placeholder": "Szukaj w naszym sklepie",
       "submit": "Szukaj",
       "products": "Produkty",
       "articles": "Artykuły",
@@ -56,10 +39,7 @@
       "collections": "Kolekcje",
       "results": "Wyniki",
       "view_all": "Zobacz wszystkie wyniki",
-      "clear": "Wyczyść",
-      "no_results": "Nie znaleziono wyników. Spróbuj ponownie z innym zapytaniem.",
-      "other": "Inny",
-      "read_more": "Przeczytaj więcej"
+      "clear": "Wyczyść"
     },
     "social": {
       "share_the_love": "Podziel się miłością"
@@ -74,23 +54,11 @@
       "add_collection": "Dodaj kolekcję",
       "collection_title": "Tytuł kolekcji",
       "blog_title": "Tytuł twojego wpisu",
-      "blog_post": "Wpis na blogu",
-      "featured_blog_posts": "Polecane wpisy na blogu",
-      "blog_excerpt": "Blog może być używany do omawiania nowych premier produktów, wskazówek lub innych wiadomości, którymi chcesz się podzielić ze swoimi klientami. Możesz sprawdzić blog e-commerce Shopify w poszukiwaniu inspiracji i porad dotyczących własnego sklepu i bloga.",
-      "blog_excerpt_alt": "Zaprezentuj wyróżnione treści blogowe, aby podzielić się z klientami informacjami o nowych produktach, wskazówkami i innymi wiadomościami.",
-      "blog_tag_1": "Porady",
-      "blog_tag_2": "Aktualności",
-      "blog_author": "Autor",
-      "no_content": "Ta sekcja obecnie nie zawiera żadnych treści. Dodaj treść do tej sekcji, korzystając z panelu bocznego.",
-      "collection": "Kolekcja",
-      "product": "Produkt",
-      "highlight_content": "Przyciągnij uwagę do wyróżniających się cech swojego produktu."
+      "blog_excerpt": "Twój sklep nie opublikował jeszcze żadnych wpisów w blogu. Blog może być używany do informowania o nowych produktach, wskazówek lub innych wiadomości, które chciałbyś podzielić się z klientami. Możesz zajrzeć na blog e-commerce Shopify po inspirację i porady dotyczące swojego własnego sklepu i bloga.",
+      "no_content": "Ta sekcja obecnie nie zawiera żadnych treści. Dodaj treść do tej sekcji, korzystając z panelu bocznego."
     },
     "verification_popup": {
       "return_text": "Powrót"
-    },
-    "video_popup": {
-      "replay": "Powtórna rozgrywka"
     },
     "localization": {
       "country_label": "Kraj/region",
@@ -99,7 +67,6 @@
       "update_country": "Aktualizuj kraj/region"
     },
     "accessibility": {
-      "skip_to_content": "Przejdź do treści",
       "back_to_top": {
         "scroll_to_top": "Przewiń do góry"
       },
@@ -108,15 +75,6 @@
       },
       "play_icon": {
         "play_media": "Odtwórz"
-      },
-      "pause_icon": {
-        "pause_media": "Wstrzymaj multimedia"
-      },
-      "mute_icon": {
-        "unmute_media": "Wyłącz wyciszenie multimediów"
-      },
-      "sound_icon": {
-        "mute_media": "Wycisz multimedia"
       },
       "quantity": {
         "increase_quantity": "Zwiększ ilość",
@@ -143,22 +101,12 @@
         "submit": "Wyślij"
       },
       "pagination": {
-        "page": "Przejdź do strony {{ page }}",
-        "previous": "Przejdź do poprzedniej strony",
-        "next": "Przejdź do następnej strony"
+        "previous": "Poprzednia",
+        "next": "Następna"
       },
       "navigation": {
         "go_to_item": "Przejdź do przedmiotu {{ number }}"
-      },
-      "video_popup": {
-        "name": "Wyskakujące okienko wideo",
-        "play_video": "Odtwórz wideo: {{ video }}",
-        "replay": "Odtwórz wideo"
-      },
-      "remove_filter": "Usuń filtr {{ filter }}",
-      "clear_all_filters": "Wyczyść wszystkie filtry",
-      "copy": "Kopia",
-      "before_after_slider": "Przeciągnij, aby porównać obrazy przed i po"
+      }
     },
     "time": {
       "days": "Dni",
@@ -184,13 +132,11 @@
   "blogs": {
     "article": {
       "author_on_date_html": "Dodane przez {{ author }} dnia {{ date }}",
-      "older_post": "Starszy post",
-      "newer_post": "Nowszy post",
+      "older_post": "Starszy wpis",
+      "newer_post": "Nowszy wpis",
       "tags": "Tagi",
-      "all": "Wszystko",
       "comment_meta_html": "{{ author }} dnia {{ date }}",
-      "read_more": "Czytaj więcej",
-      "reading_time": "{{ time }} min czytania"
+      "read_more": "Czytaj więcej"
     },
     "comments": {
       "title": "Dodaj komentarz",
@@ -208,7 +154,6 @@
     },
     "sidebar": {
       "recent_articles": "Ostatnie artykuły",
-      "popular_articles": "Popularne artykuły",
       "categories": "Kategorie"
     }
   },
@@ -216,18 +161,9 @@
     "general": {
       "title": "Koszyk",
       "remove": "Usuń",
-      "note": "Notatka dotycząca zamówienia",
-      "add_note": "Dodaj notatkę do zamówienia",
-      "edit_note": "Edytuj notatkę zamówienia",
-      "save_note": "Zapisz notatkę zamówienia",
-      "add_gift_note": "Dodaj wiadomość z prezentem",
-      "edit_gift_note": "Edytuj wiadomość z prezentem",
-      "save_gift_note": "Zapisz wiadomość z prezentem",
-      "save": "Ratować",
+      "note": "Specjalne instrukcje dla sprzedawcy",
       "see_more": "Zobacz więcej",
       "subtotal": "Razem",
-      "regular_subtotal": "Zwykła suma częściowa",
-      "sale_subtotal": "Podsumowanie sprzedaży",
       "taxes_and_shipping_at_checkout": "Podatki i dostawa obliczane przy kasie",
       "taxes_and_shipping_policy_at_checkout_html": "Podatki i <a href=\"{{ link }}\">dostawa</a> obliczane przy kasie",
       "taxes_included_but_shipping_at_checkout": "Podatek zawarty i dostawa obliczana przy kasie",
@@ -236,9 +172,7 @@
       "checkout": "Przejdź do kasy",
       "empty": "Twój koszyk jest obecnie pusty.",
       "close_cart": "Zamknij koszyk",
-      "view_cart": "Wyświetl koszyk",
-      "savings_html": "Oszczędzasz {{ price }}",
-      "return_to_shop": "Powrót do sklepu"
+      "savings_html": "Oszczędzasz {{ price }}"
     },
     "label": {
       "product": "Produkt",
@@ -302,7 +236,7 @@
       "clear_all": "Wyczyść wszystkie",
       "empty": "Nie znaleziono produktów",
       "from": "Od",
-      "filter_and_sort": "Filtruj/sortuj",
+      "filter_and_sort": "Filtruj i sortuj",
       "filter_by_label": "Filtruj według",
       "filter_button": "Filtruj",
       "filters_selected": {
@@ -336,46 +270,16 @@
       "product_two": "Produkt dwa",
       "product_three": "Produkt trzy",
       "product_four": "Produkt cztery"
-    },
-    "cross-sells": {
-      "no_metafields_title": "Brak przypisanych metapól cross-sell",
-      "no_metafields_subtitle": "Należy pamiętać, że ta wiadomość będzie wyświetlana tylko w edytorze.",
-      "no_metafields_description_html": "Przypisz produkty cross-sell na podstawie głównego produktu, tworząc <strong>metapola produktu</strong> z przestrzenią nazw „cross_sell” i kluczem „products”. Musi to być typ zawartości „product” z ustawieniem „Lista produktów”.",
-      "learn_more": "Dowiedz się więcej"
-    },
-    "product_slideshow": {
-      "onboarding": "Zaprezentuj produkty w atrakcyjny sposób wizualnie.",
-      "shop_now": "Kup teraz"
-    },
-    "focused_product_gallery": {
-      "onboarding": "Przyciągnij uwagę do polecanych produktów.",
-      "shop_now": "Kup teraz"
-    },
-    "specification-table": {
-      "preview": {
-        "width": "Szerokość",
-        "treadwear": "Zużycie bieżnika",
-        "rating": "Ocena"
-      },
-      "no_setup_title": "Nie skonfigurowano żadnych pól metaspecyfikacji ani kluczy",
-      "no_setup_subtitle": "Należy pamiętać, że ta wiadomość będzie wyświetlana tylko w edytorze.",
-      "no_setup_description_html": "Skonfiguruj metapola specyfikacji z przestrzenią nazw „specyfikacje” lub „specyfikacja” i określ klucze metapól, które chcesz wyświetlić w ustawieniach sekcji.",
-      "learn_more": "Dowiedz się więcej"
-    },
-    "quiz": {
-      "start": "Start",
-      "no_results_heading": "Tym razem nie znaleziono pasujących wyników.",
-      "no_results_text": "Spróbuj poprawić swoje odpowiedzi lub sprawdź ponownie wkrótce."
     }
   },
   "contact": {
     "form": {
-      "name": "Nazwa",
+      "name": "Imię",
       "email": "E-mail",
       "phone": "Numer telefonu",
       "message": "Wiadomość",
-      "send": "Wysłać",
-      "post_success": "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe."
+      "send": "Wyślij",
+      "post_success": "Dziękujemy za kontakt. Skontaktujemy się z Tobą tak szybko, jak to możliwe."
     }
   },
   "customer": {
@@ -423,8 +327,7 @@
       "sign_in": "Zaloguj się",
       "cancel": "Powrót do sklepu",
       "guest_title": "Kontynuuj jako gość",
-      "guest_continue": "Kontynuuj",
-      "alternate_provider_separator": "Lub"
+      "guest_continue": "Kontynuuj"
     },
     "orders": {
       "title": "Historia zamówień",
@@ -525,10 +428,8 @@
       "search": "Szukaj",
       "account": "Konto",
       "your_cart": "Twój koszyk",
-      "offers_drawer": "Oferuje szufladę",
       "currency": "Waluta",
-      "language": "Język",
-      "mega_menu_empty": "To mega menu nie ma obecnie żadnej zawartości. Dodaj zawartość do mega menu w panelu administracyjnym Shopify w: Sklep internetowy > Menu."
+      "language": "Język"
     }
   },
   "products": {
@@ -543,18 +444,10 @@
       "giftwrap_label": "Pakowanie prezentu",
       "giftwrap_note": "Wiadomość na prezent",
       "giftwrap_note_placeholder": "Dodaj wiadomość na prezent tutaj",
-      "from_text_html": "Od {{ price }}",
-      "file_upload_html": "Przeciągnij i upuść lub <a aria-label=\"browse\" href=\"#\" onclick=\"event.preventDefault();\">przeglądaj</a> pliki do przesłania",
-      "file_upload_browse_html": "<a aria-label=\"Browse\" href=\"#\" onclick=\"event.preventDefault();\">Przeglądaj</a> pliki do przesłania",
-      "add_product_to_cart": "Dodaj {{ product }} do koszyka",
-      "product_added_to_cart": "{{ product }} dodano do koszyka",
-      "preorder_product": "Zamów w przedsprzedaży {{ product }}",
-      "view_options_for_product": "Wyświetl opcje dla {{ product }}",
-      "view_details": "Zobacz szczegóły"
+      "from_text_html": "Od {{ price }}"
     },
     "product": {
       "sold_out": "Wyprzedane",
-      "preorder": "Przed Sprzedaż",
       "on_sale": "W promocji",
       "on_sale_from_html": "W promocji od {{ price }}",
       "sale": "Promocja",
@@ -576,12 +469,11 @@
       "include_taxes": "Podatek wliczony.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Dostawa</a> obliczana przy kasie.",
       "quote": "Cytat",
-      "preorder_today": "Zamów już dziś",
       "in_stock": "Dostępny",
       "low_stock": "Niski stan",
       "out_of_stock": "Niedostępny",
       "stock_left": "pozostało",
-      "out_of_stock_html": "Kliknij <a href=\"#\"><strong>tutaj</strong></a>, aby otrzymać powiadomienie e-mailem, gdy {{ product }} - {{ variant }} będzie dostępny.",
+      "out_of_stock_html": "Kliknij <a href=\"#\"><strong>tutaj</strong></a>, aby otrzymać powiadomienie e-mailem, gdy {{ product }} będzie dostępny.",
       "wrong_email": "Podaj prawidłowy adres e-mail.",
       "out_of_stock_success": "Dzięki! Poinformujemy Cię, gdy ten produkt będzie dostępny!",
       "read_more_html": "Czytaj więcej",
@@ -600,7 +492,6 @@
     "general": {
       "view_store_info": "Zobacz informacje o sklepie",
       "check_other_stores": "Sprawdź dostępność w innych sklepach",
-      "pickup_availability": "Dostępność odbioru",
       "pick_up_available": "Odbiór dostępny",
       "pick_up_currently_unavailable": "Obecnie brak możliwości odbioru",
       "pick_up_available_at_html": "Odbiór dostępny w {{ location_name }}",
@@ -609,21 +500,15 @@
   },
   "gift_cards": {
     "issued": {
-      "heading": "Oto Twoja karta podarunkowa!",
-      "heading_guest": "Oto Twoja karta podarunkowa {{ customer }}!",
-      "heading_print": "Oto Twoja karta podarunkowa do {{ shop_name }}!",
+      "title": "Oto twój bon podarunkowy o wartości {{ value }} dla {{ shop }}!",
+      "subtext": "Oto twój bon podarunkowy!",
       "disabled": "Wyłączony",
-      "expired": "Wygasły",
-      "expires": "Wygasa",
-      "redeem": "Użyj tego kodu, aby zrealizować kartę podarunkową przy kasie",
+      "expired": "Wygasł {{ expiry }}",
+      "active": "Wygasa {{ expiry }}",
+      "redeem": "Użyj tego kodu przy kasie, aby wykorzystać swój bon podarunkowy",
       "shop_link": "Rozpocznij zakupy",
       "print": "Drukuj",
-      "add_to_apple_wallet": "Dodaj do Apple Wallet",
-      "balance": "Balansować",
-      "copy": "Kopia",
-      "placeholder_expiry_date": "12.3.28",
-      "qr_code_text": "lub kod QR w sklepie:",
-      "qr_image_alt": "Kod QR — zeskanuj, aby zrealizować kartę podarunkową"
+      "add_to_apple_wallet": "Dodaj do Apple Wallet"
     },
     "recipient": {
       "checkbox": "Chcę wysłać to jako prezent",
@@ -640,7 +525,6 @@
       "thanks_mailing": "Dziękujemy za zapisanie się!",
       "find_out": "Dowiedz się, kiedy otworzymy",
       "password": "Wprowadź sklep za pomocą hasła",
-      "enter_password": "Wprowadź hasło",
       "store_owner": "Jesteś właścicielem sklepu?",
       "store_owner_html": "<a href=\"/admin\">Zaloguj się tutaj</a>",
       "continue": "Kontynuuj",

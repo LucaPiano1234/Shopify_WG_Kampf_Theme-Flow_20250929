@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
 class LinkedProducts extends HTMLElement {
   constructor() {
     super();
@@ -27,9 +28,6 @@ class LinkedProducts extends HTMLElement {
 
     if (!label || !this.imageSwatchLabel) return;
     this.imageSwatchLabel.textContent = label;
-    this.imageSwatchLabel.classList.remove('fade-in-label');
-    void this.imageSwatchLabel.offsetWidth; // Force reflow to reset the animation
-    this.imageSwatchLabel.classList.add('fade-in-label');
   }
 
   setEventListeners() {

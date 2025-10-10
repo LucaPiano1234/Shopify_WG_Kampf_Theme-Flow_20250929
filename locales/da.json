@@ -1,53 +1,36 @@
 {
   "general": {
-    "404": {
-      "title": "404 Side ikke fundet",
-      "subtext_html": "Den side, du har anmodet om, eksisterer ikke."
-    },
     "meta": {
       "tags": "Mærket som \"{{ tags }}\"",
       "page": "Side {{ page }}"
     },
-    "forms": {
-      "required_input_error": "Udfyld venligst dette felt.",
-      "required_input_error_with_label": "Udfyld venligst feltet \"{{ label }}\".",
-      "required_upload_error": "Upload venligst en fil.",
-      "required_upload_error_with_label": "Upload venligst en fil til feltet \"{{ label }}\".",
-      "required_checkbox_error": "Marker venligst dette felt, hvis du vil fortsætte.",
-      "required_checkbox_error_with_label": "Marker venligst feltet \"{{ label }}\", hvis du vil fortsætte.",
-      "required_dropdown_error": "Vælg venligst en mulighed fra rullemenuen.",
-      "required_dropdown_error_with_label": "Vælg venligst en mulighed fra rullemenuen \"{{ label }}\".",
-      "max_filesize_20mb": "Maks filstørrelse: 20MB.",
-      "max_filesize_error": "Denne fil er for stor. Den maksimale filstørrelse er 20 MB.",
-      "quantity_max_error": "Alt tilgængeligt lager for {{ variant }} er blevet tilføjet til indkøbskurven.",
-      "choose_an_option": "Vælg en mulighed",
-      "form_input": "Formularinput",
-      "email_must_be_formatted_as_an_email": "E-mail skal formateres som en e-mail."
+    "404": {
+      "title": "404 Side ikke fundet",
+      "subtext_html": "Den side, du har anmodet om, eksisterer ikke."
     },
     "continue_shopping": "Fortsæt med at shoppe",
     "breadcrumbs": {
       "home": "Hjem",
-      "home_link_title": "Tilbage til forsiden",
-      "shop": "Obchod"
+      "home_link_title": "Tilbage til forsiden"
     },
     "newsletter_form": {
       "newsletter_email": "email@example.com",
       "submit": "Tilmeld",
-      "confirmation": "Tak, fordi du abonnerer"
+      "confirmation": "Tak for din tilmelding"
     },
     "newsletter_form_section": {
       "header": "Tilmeld dig vores nyhedsbrev",
       "header_text": "Email adresse:",
       "newsletter_text": "Indtast email",
       "submit": "Tilmeld",
-      "thanks": "Tak fordi du abonnerer",
-      "newsletter_email": "Kunde e-mail",
-      "already_subscribed": "E-mail er allerede tilmeldt"
+      "thanks": "Tak for din tilmelding!",
+      "newsletter_email": "Kunde e-mail"
     },
     "search": {
       "no_results_html": "Din søgning efter \"{{ terms }}\" gav ingen resultater.",
       "results_for_html": "Din søgning efter \"{{ terms }}\" viste følgende:",
       "title": "Søg",
+      "placeholder": "Søg i vores butik",
       "submit": "Søg",
       "products": "Produkter",
       "articles": "Artikler",
@@ -56,10 +39,7 @@
       "collections": "Kollektioner",
       "results": "Resultater",
       "view_all": "Se alle resultater",
-      "clear": "Ryd",
-      "no_results": "Ingen resultater fundet. Prøv venligst igen med en anden forespørgsel.",
-      "other": "Andre",
-      "read_more": "Læs mere"
+      "clear": "Ryd"
     },
     "social": {
       "share_the_love": "Del kærligheden"
@@ -74,23 +54,11 @@
       "add_collection": "Tilføj en kollektion",
       "collection_title": "Kollektionstitel",
       "blog_title": "Titel på dit indlæg",
-      "blog_post": "Blogindlæg",
-      "featured_blog_posts": "Udvalgte blogindlæg",
-      "blog_excerpt": "En blog kan bruges til at tale om nye produktlanceringer, tips eller andre nyheder, du vil dele med dine kunder. Du kan tjekke Shopifys e-handelsblog for inspiration og råd til din egen butik og blog.",
-      "blog_excerpt_alt": "Vis fremhævet blogindhold for at dele nye produktlanceringer, tips eller andre nyheder med dine kunder.",
-      "blog_tag_1": "Tips",
-      "blog_tag_2": "Nyheder",
-      "blog_author": "Forfatter",
-      "no_content": "Dette afsnit indeholder i øjeblikket ingen indhold. Tilføj indhold til dette afsnit ved hjælp af sidepanelet.",
-      "collection": "Samling",
-      "product": "Produkt",
-      "highlight_content": "Henvis opmærksomheden til dit produkts iøjnefaldende funktioner."
+      "blog_excerpt": "Din butik har endnu ikke udgivet nogen blogindlæg. En blog kan bruges til at tale om nye produktlanceringer, tips eller andre nyheder, du gerne vil dele med dine kunder. Du kan kigge på Shopifys e-handelsblog for inspiration og rådgivning til din egen butik og blog.",
+      "no_content": "Dette afsnit indeholder i øjeblikket ingen indhold. Tilføj indhold til dette afsnit ved hjælp af sidepanelet."
     },
     "verification_popup": {
       "return_text": "Tilbage"
-    },
-    "video_popup": {
-      "replay": "Genafspilning"
     },
     "localization": {
       "country_label": "Land/region",
@@ -99,7 +67,6 @@
       "update_country": "Opdater land/region"
     },
     "accessibility": {
-      "skip_to_content": "Gå til indhold",
       "back_to_top": {
         "scroll_to_top": "Rul til toppen"
       },
@@ -108,15 +75,6 @@
       },
       "play_icon": {
         "play_media": "Afspil medier"
-      },
-      "pause_icon": {
-        "pause_media": "Sæt medier på pause"
-      },
-      "mute_icon": {
-        "unmute_media": "Slå lyden til for medier"
-      },
-      "sound_icon": {
-        "mute_media": "Slå medier fra"
       },
       "quantity": {
         "increase_quantity": "Øg antal",
@@ -143,22 +101,12 @@
         "submit": "Indsend"
       },
       "pagination": {
-        "page": "Gå til side {{ page }}",
-        "previous": "Gå til forrige side",
-        "next": "Gå til næste side"
+        "previous": "Forrige",
+        "next": "Næste"
       },
       "navigation": {
         "go_to_item": "Gå til vare {{ number }}"
-      },
-      "video_popup": {
-        "name": "Video popup",
-        "play_video": "Afspil video: {{ video }}",
-        "replay": "Afspil video igen"
-      },
-      "remove_filter": "Fjern filter {{ filter }}",
-      "clear_all_filters": "Ryd alle filtre",
-      "copy": "Kopi",
-      "before_after_slider": "Træk for at sammenligne før- og efterbilleder"
+      }
     },
     "time": {
       "days": "Dage",
@@ -187,10 +135,8 @@
       "older_post": "Ældre indlæg",
       "newer_post": "Nyere indlæg",
       "tags": "Tags",
-      "all": "Alle",
       "comment_meta_html": "{{ author }} den {{ date }}",
-      "read_more": "Læs mere",
-      "reading_time": "{{ time }} min læsning"
+      "read_more": "Læs mere"
     },
     "comments": {
       "title": "Efterlad en kommentar",
@@ -208,7 +154,6 @@
     },
     "sidebar": {
       "recent_articles": "Nylige artikler",
-      "popular_articles": "Populære artikler",
       "categories": "Kategorier"
     }
   },
@@ -216,18 +161,9 @@
     "general": {
       "title": "Indkøbskurv",
       "remove": "Fjern",
-      "note": "Bestillingsseddel",
-      "add_note": "Tilføj ordrebemærkning",
-      "edit_note": "Rediger ordrenotat",
-      "save_note": "Gem ordrenotat",
-      "add_gift_note": "Tilføj gavebesked",
-      "edit_gift_note": "Rediger gavebesked",
-      "save_gift_note": "Gem gavebesked",
-      "save": "Spare",
+      "note": "Særlige instruktioner til sælger",
       "see_more": "Se mere",
       "subtotal": "Subtotal",
-      "regular_subtotal": "Regelmæssig subtotal",
-      "sale_subtotal": "Salg subtotal",
       "taxes_and_shipping_at_checkout": "Skatter og forsendelse beregnes ved betaling",
       "taxes_and_shipping_policy_at_checkout_html": "Skatter og <a href=\"{{ link }}\">forsendelse</a> beregnes ved betaling",
       "taxes_included_but_shipping_at_checkout": "Skat inkluderet, og forsendelse beregnes ved betaling",
@@ -236,9 +172,7 @@
       "checkout": "Til betaling",
       "empty": "Din kurv er i øjeblikket tom.",
       "close_cart": "Luk kurv",
-      "view_cart": "Se kurv",
-      "savings_html": "Du sparer {{ price }}",
-      "return_to_shop": "Vend tilbage til butikken"
+      "savings_html": "Du sparer {{ price }}"
     },
     "label": {
       "product": "Produkt",
@@ -302,7 +236,7 @@
       "clear_all": "Ryd alt",
       "empty": "Ingen produkter fundet",
       "from": "Fra",
-      "filter_and_sort": "Filtrer/Sortér",
+      "filter_and_sort": "Filtrer og sorter",
       "filter_by_label": "Filtrer efter",
       "filter_button": "Filtrer",
       "filters_selected": {
@@ -336,46 +270,16 @@
       "product_two": "Produkt to",
       "product_three": "Produkt tre",
       "product_four": "Produkt fire"
-    },
-    "cross-sells": {
-      "no_metafields_title": "Ingen krydssalgsmetafelter tildelt",
-      "no_metafields_subtitle": "Bemærk venligst, at denne besked kun vises i editoren.",
-      "no_metafields_description_html": "Tildel krydssalgsprodukter baseret på hovedproduktet ved at oprette <strong>produktmetafelter</strong> med navneområdet &quot;cross_sell&quot; og nøglen &quot;products&quot;. Dette skal være en indholdstype af typen &#39;product&#39; med indstillingen &#39;Liste over produkter&#39;.",
-      "learn_more": "Lær mere"
-    },
-    "product_slideshow": {
-      "onboarding": "Fremvis produkter med en engagerende visuel præsentation.",
-      "shop_now": "Køb nu"
-    },
-    "focused_product_gallery": {
-      "onboarding": "Fokuser på udvalgte produkter.",
-      "shop_now": "Køb nu"
-    },
-    "specification-table": {
-      "preview": {
-        "width": "Bredde",
-        "treadwear": "Træningssæt",
-        "rating": "Vurdering"
-      },
-      "no_setup_title": "Ingen specifikationsmetafelter eller -nøgler konfigureret",
-      "no_setup_subtitle": "Bemærk venligst, at denne besked kun vises i editoren.",
-      "no_setup_description_html": "Konfigurer specifikationsmetafelter med navneområdet \"specifications\" eller \"specification\", og angiv de metafeltnøgler, du vil vise, i sektionsindstillingerne.",
-      "learn_more": "Lær mere"
-    },
-    "quiz": {
-      "start": "Starte",
-      "no_results_heading": "Ingen kampe denne gang.",
-      "no_results_text": "Prøv at justere dine svar, eller tjek tilbage senere."
     }
   },
   "contact": {
     "form": {
       "name": "Navn",
-      "email": "E-mail",
+      "email": "Email",
       "phone": "Telefonnummer",
       "message": "Besked",
-      "send": "Sende",
-      "post_success": "Tak, fordi du kontakter os. Vi vender tilbage til dig hurtigst muligt."
+      "send": "Send",
+      "post_success": "Tak for din henvendelse. Vi vender tilbage til dig så hurtigt som muligt."
     }
   },
   "customer": {
@@ -423,8 +327,7 @@
       "sign_in": "Log ind",
       "cancel": "Tilbage til butik",
       "guest_title": "Fortsæt som gæst",
-      "guest_continue": "Fortsæt",
-      "alternate_provider_separator": "eller"
+      "guest_continue": "Fortsæt"
     },
     "orders": {
       "title": "Ordrehistorik",
@@ -525,10 +428,8 @@
       "search": "Søg",
       "account": "Konto",
       "your_cart": "Kurv",
-      "offers_drawer": "Tilbyder skuffe",
       "currency": "Valuta",
-      "language": "Sprog",
-      "mega_menu_empty": "Denne megamenu har i øjeblikket ikke noget indhold. Tilføj indhold til megamenuen i Shopify-administratoren på: Onlinebutik > Menu."
+      "language": "Sprog"
     }
   },
   "products": {
@@ -543,18 +444,10 @@
       "giftwrap_label": "Indpakning",
       "giftwrap_note": "Gavebesked",
       "giftwrap_note_placeholder": "Tilføj din gavebesked her",
-      "from_text_html": "Fra {{ price }}",
-      "file_upload_html": "Træk og slip eller <a aria-label=\"browse\" href=\"#\" onclick=\"event.preventDefault();\">gennemse</a> filer for at uploade",
-      "file_upload_browse_html": "<a aria-label=\"Browse\" href=\"#\" onclick=\"event.preventDefault();\">Gennemse</a> filer for at uploade",
-      "add_product_to_cart": "Tilføj {{ produkt }} til indkøbskurven",
-      "product_added_to_cart": "{{ produkt }} tilføjet til indkøbskurven",
-      "preorder_product": "Forudbestil {{ produkt }}",
-      "view_options_for_product": "Se muligheder for {{ produkt }}",
-      "view_details": "Se detaljer"
+      "from_text_html": "Fra {{ price }}"
     },
     "product": {
       "sold_out": "Udsolgt",
-      "preorder": "Forudbestille",
       "on_sale": "Tilbud",
       "on_sale_from_html": "Tilbud fra {{ price }}",
       "sale": "Tilbud",
@@ -576,12 +469,11 @@
       "include_taxes": "Inkl. skat.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Fragt</a> beregnes ved kassen.",
       "quote": "Citat",
-      "preorder_today": "Forudbestil i dag",
       "in_stock": "På lager",
       "low_stock": "Lavt lager",
       "out_of_stock": "Ikke på lager",
       "stock_left": "tilbage",
-      "out_of_stock_html": "Klik <a href=\"#\"><strong>her</strong></a> for at få besked pr. e-mail, når {{ product }} - {{ variant }} bliver tilgængelig.",
+      "out_of_stock_html": "Klik <a href=\"#\"><strong>her</strong></a> for at få besked pr. e-mail, når {{ product }} bliver tilgængelig.",
       "wrong_email": "Indtast venligst en gyldig e-mail-adresse.",
       "out_of_stock_success": "Tak! Vi giver dig besked, når dette produkt bliver tilgængeligt!",
       "read_more_html": "Læs mere",
@@ -600,7 +492,6 @@
     "general": {
       "view_store_info": "Se butiksinformation",
       "check_other_stores": "Tjek tilgængelighed i andre butikker",
-      "pickup_availability": "Afhentningstilgængelighed",
       "pick_up_available": "Afhentning tilgængelig",
       "pick_up_currently_unavailable": "Afhentning i øjeblikket ikke tilgængelig",
       "pick_up_available_at_html": "Afhentning tilgængelig hos {{ location_name }}",
@@ -609,21 +500,15 @@
   },
   "gift_cards": {
     "issued": {
-      "heading": "Her er dit gavekort!",
-      "heading_guest": "Her er dit gavekort {{ kunde }}!",
-      "heading_print": "Her er dit gavekort til {{ shop_name }}!",
+      "title": "Her er din {{ value }} gavekort til {{ shop }}!",
+      "subtext": "Her er dit gavekort!",
       "disabled": "Deaktiveret",
-      "expired": "Udløbet",
-      "expires": "Udløber",
-      "redeem": "Brug denne kode til at indløse dit gavekort ved kassen",
+      "expired": "Udløbet den {{ expiry }}",
+      "active": "Udløber den {{ expiry }}",
+      "redeem": "Brug denne kode ved kassen for at indløse dit gavekort",
       "shop_link": "Start shopping",
       "print": "Udskriv",
-      "add_to_apple_wallet": "Tilføj til Apple Wallet",
-      "balance": "Balance",
-      "copy": "Kopi",
-      "placeholder_expiry_date": "12.3.28",
-      "qr_code_text": "eller QR-kode i butikken:",
-      "qr_image_alt": "QR-kode – scan for at indløse gavekort"
+      "add_to_apple_wallet": "Tilføj til Apple Wallet"
     },
     "recipient": {
       "checkbox": "Jeg vil sende dette som en gave",
@@ -640,7 +525,6 @@
       "thanks_mailing": "Tak for tilmeldingen!",
       "find_out": "Find ud af, når vi åbner",
       "password": "Indtast butikken med adgangskode",
-      "enter_password": "Indtast adgangskode",
       "store_owner": "Er du butiksejeren?",
       "store_owner_html": "<a href=\"/admin\">Log ind her</a>",
       "continue": "Fortsæt",

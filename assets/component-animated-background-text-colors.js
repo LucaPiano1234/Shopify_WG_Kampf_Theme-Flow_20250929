@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
 class animatedBackgroundTextColors extends HTMLElement {
   constructor() {
     super();
@@ -54,6 +55,10 @@ class animatedBackgroundTextColors extends HTMLElement {
     this.blocks.forEach(block => block.classList.remove('active'));
 
     e.target.classList.add('active');
+    
+    e.target.style.backgroundColor = e.target.getAttribute('data-background-color-block');
+    e.target.style.color = e.target.getAttribute('data-front-color-block');
+    e.target.style.transition = 'none';
 
     this.style.transition = 'none';
     this.style.backgroundColor = e.target.getAttribute('data-background-color-block');
@@ -66,6 +71,10 @@ class animatedBackgroundTextColors extends HTMLElement {
   handleBlockDeselect(e) {
     const blockIndex = e.target.dataset.announcementBlockIndex;
     if (!blockIndex) return;
+
+    e.target.style.backgroundColor = '';
+    e.target.style.color = '';
+    e.target.style.transition = '';
 
     this.style.transition = '';
 

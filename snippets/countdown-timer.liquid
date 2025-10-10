@@ -75,10 +75,14 @@
 {% if background_color_override != blank %}
   <style>
     [data-timer-id="{{ timer_id }}"] .countdown-timer__separator-dot {
-      background-color: rgba({{ background_color_override.rgba }});
+      background-color: {{ background_color_override }};
     }
   </style>
 {% endif %}
+
+{% capture separator %}
+  <div class="countdown-timer__separator"><span class="countdown-timer__separator-dot"></span><span class="countdown-timer__separator-dot"></span></div>
+{% endcapture %}
 
 <countdown-timer
   data-timer-id="{{ timer_id }}"
@@ -94,7 +98,6 @@
   class="countdown-timer__component{% if hide_timer %} hide{% endif %}"
   role="presentation"
   {% if is_block %}{{ block.shopify_attributes }}{% endif %}
-  {% if attributes != blank %}{{ attributes }}{% endif %}
 >
   <div class="countdown-timer__container">
 
@@ -114,6 +117,8 @@
         <span>{{ 'general.time.days' | t }}</span>
       {% endif %}
     </div>
+
+    {{ separator }}
 
     <div class="countdown-timer__digit-group-container" aria-hidden="true">
       <div class="countdown-timer__digit-group">

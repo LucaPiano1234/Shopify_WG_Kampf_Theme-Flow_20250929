@@ -5,16 +5,50 @@
 
 {% paginate collection.products by display-total-collection-products-total %}
 
+  {%- capture pagination_list -%}
+    <ul>
+      {% if paginate.previous %}
+        <li class="pagination-arrow"><a class="standalone-icon--wrapper" aria-label="{{ 'general.accessibility.pagination.previous' | t }}" href="{{ paginate.previous.url }}">
+          {% render 'theme-icon', icon: 'chevron_left', iconSize: 20 %}
+        </a></li>
+      {% else %}
+        <li class="prev disabled"><a href="#" onclick="return false;">&laquo;</a></li>
+      {% endif %}
+
+      {% for part in paginate.parts %}
+        {% if part.is_link %}
+          <li class="pagination-number">{{ part.title | link_to: part.url }}</li>
+        {% else %}
+          {% if part.title == '&hellip;' %}
+            <li class="ellipsis">{{ part.title }}</li>
+          {% else %}
+            <li class="active pagination-number">{{ part.title | link_to: part.url }}</li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if paginate.next %}
+        <li class="pagination-arrow pagination-next"><a class="standalone-icon--wrapper" aria-label="{{ 'general.accessibility.pagination.next' | t }}" href="{{ paginate.next.url }}">
+          {% render 'theme-icon', icon: 'chevron_right', iconSize: 20 %}
+        </a></li>
+      {% else %}
+        <li class="next disabled"><a href="#" onclick="return false;">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  {%- endcapture -%}
+
   {% capture paginate_style %}
     {% if paginate.pages > 1 %}
       {% if pagination_options == 'pagination_infinite_scrolling' %}
         <div style="display: none" class="pagination-loading">
-          {% liquid 
-            assign icon_fill = 'rgba(' | append: settings.color_primary_button_text.rgba | append: ')'
-          %}
-          {% render 'theme-icon' with icon: 'circle-notch', iconClasses: 'spin flex-full', icon_fill: icon_fill, iconSize: '20' %}
+          {% render 'theme-icon' with icon: 'circle-notch', iconClasses: 'spin flex-full', icon_fill: settings.color_primary_button_text, iconSize: '20' %}
           <span class="sr-only">{{ 'collections.paginate.load_more' | t }}</span>
         </div>
+        <noscript>
+          <div class="noscript-pagination">
+            {{ pagination_list }}
+          </div>
+        </noscript>
       {% endif %}
 
       <div
@@ -23,22 +57,22 @@
         data-paginate-offset="{{ paginate.current_offset }}"
         data-paginate-size="{{ paginate.page_size }}"
       >
-        {% render 'pagination', paginate: paginate %}
+        {{ pagination_list }}
       </div>
     {% endif %}
   {% endcapture %}
 
 {% case desktop_products_per_row %}
   {% when 2 %}
-    {% assign desktop_item_width = 'large--one-half' %}
+    {% assign desktop_item_width = 'large--one-half wow fadeInUp' %}
   {% when 3 %}
-    {% assign desktop_item_width = 'large--one-third' %}
+    {% assign desktop_item_width = 'large--one-third wow fadeInUp' %}
   {% when 4 %}
-    {% assign desktop_item_width = 'large--one-quarter' %}
+    {% assign desktop_item_width = 'large--one-quarter wow fadeInUp' %}
   {% when 5 %}
-    {% assign desktop_item_width = 'large--one-fifth' %}
+    {% assign desktop_item_width = 'large--one-fifth wow fadeInUp' %}
   {% when 6 %}
-    {% assign desktop_item_width = 'large--one-sixth' %}
+    {% assign desktop_item_width = 'large--one-sixth wow fadeInUp' %}
 {% endcase %}
 
 {% assign tablet_item_width = 'medium--one-half' %}
@@ -55,6 +89,7 @@
   <div
     id="CollectionProductGrid"
     data-section-id="{{ section.id }}"
+    class="{{ classes }}"
     data-wetheme-section-type="template--collection"
     data-wetheme-section-id="{{ section.id }}"
   >
@@ -70,57 +105,8 @@
           id="template--collection"
         >
           {% for product in collection.products %}
-            <div class="grid__item {{ grid_item_width }} show-on-scroll">
-              {%- liquid
-                assign loading = 'lazy'
-                if forloop.index <= desktop_products_per_row
-                  assign loading = 'eager'
-                endif
-
-                assign animate_order = forloop.index | modulo: desktop_products_per_row
-                if animate_order == 0
-                  assign animate_order = desktop_products_per_row
-                endif
-                assign badge_anim_order = animate_order | plus: 2
-
-                assign animate_order_ipad = forloop.index | modulo: 2
-                if animate_order_ipad == 0
-                  assign animate_order_ipad = 2
-                endif
-                assign badge_anim_order_ipad = animate_order_ipad | plus: 2
-
-                assign animate_order_mobile = forloop.index | modulo: mobile_products_per_row
-                if animate_order_mobile == 0
-                  assign animate_order_mobile = mobile_products_per_row
-                endif
-                assign badge_anim_order_mobile = animate_order_mobile | plus: 2
-              -%}
-              {% render 'grid-view-item',
-                product: product,
-                collection: collection,
-                enable_badges: settings.show_badges,
-                grid_count_desktop: desktop_products_per_row,
-                grid_count_mobile: mobile_products_per_row,
-                loading: loading,
-                badge_anim_order: badge_anim_order,
-                badge_anim_order_mobile: badge_anim_order_mobile,
-                badge_anim_order_ipad: badge_anim_order_ipad,
-                animate: true,
-                animate_order: animate_order,
-                animate_order_ipad: animate_order_ipad,
-                animate_order_mobile: animate_order_mobile,
-                show_highlight: show_highlight,
-                highlight_icon: highlight_icon,
-                highlight_custom_icon: highlight_custom_icon,
-                highlight_heading: highlight_heading,
-                highlight_reference: highlight_reference,
-                highlight_text_color: highlight_text_color,
-                highlight_background_color: highlight_background_color,
-                highlight_alignment: highlight_alignment,
-                highlight_font_size: highlight_font_size,
-                highlight_collapsible_tab: highlight_collapsible_tab,
-                highlight_open_close_icon: highlight_open_close_icon,
-                highlight_button_borders: highlight_button_borders %}
+            <div class="grid__item {{ grid_item_width }}">
+              {% render 'grid-view-item', product: product, collection: collection, enable_badges: settings.show_badges, grid_count_desktop: desktop_products_per_row, grid_count_mobile: mobile_products_per_row %}
             </div>
           {% else %}
             {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
@@ -128,21 +114,7 @@
                 {% capture svg_index %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                 {% capture svg_index_reversed %}{% cycle 6, 5, 4, 3, 2, 1 %}{% endcapture %}
                 <div class="grid__item {{ grid_item_width }}">
-                  {% render 'grid-view-item-placeholder',
-                    svg_index: svg_index,
-                    svg_index_reversed: svg_index_reversed,
-                    show_highlight: show_highlight,
-                    highlight_icon: highlight_icon,
-                    highlight_custom_icon: highlight_custom_icon,
-                    highlight_heading: highlight_heading,
-                    highlight_reference: highlight_reference,
-                    highlight_text_color: highlight_text_color,
-                    highlight_background_color: highlight_background_color,
-                    highlight_alignment: highlight_alignment,
-                    highlight_font_size: highlight_font_size,
-                    highlight_collapsible_tab: highlight_collapsible_tab,
-                    highlight_open_close_icon: highlight_open_close_icon,
-                    highlight_button_borders: highlight_button_borders %}
+                  {% render 'grid-view-item-placeholder', svg_index: svg_index, svg_index_reversed: svg_index_reversed %}
                 </div>
               {% endfor %}
             {% else %}

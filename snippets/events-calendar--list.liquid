@@ -45,16 +45,12 @@
     </div>
   </div>
 
-  {% unless cta_text == blank %}
-    {% render 'dynamic-section-button' with
-      id: section_id,
-      link: cta_link,
-      label: cta_text,
-      style: cta_style,
-      div_classes: 'event-cta',
-      a_classes: 'event-cta-link--list',
-      attributes: 'data-section-main-link'
-    %}
+  {% unless cta == false %}
+    <div class="event-cta">
+      <a class="event-cta-link--list btn" href="{{ cta_link }}" data-section-main-link>
+        {{ cta_text }}
+      </a>
+    </div>
   {% endunless %}
 
 </div>

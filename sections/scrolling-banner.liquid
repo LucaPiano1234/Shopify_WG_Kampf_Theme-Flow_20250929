@@ -1,14 +1,7 @@
 {{ 'section-scrolling-banner.min.css' | asset_url | stylesheet_tag }}
 
 {%- if section.blocks.size > 0 -%}
-  <div class="color-scheme--{{ section.settings.color_scheme }} wrapper-spacing--v{% if section.settings.show_fade %} show-fade{% endif %}{% if request.visual_preview_mode %} section-preview{% else %} show-on-scroll{% endif %}" 
-    data-wetheme-section-type="scrolling-banner" 
-    data-wetheme-section-id="{{ section.id }}"
-    style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
-  >
-
-    {% comment %} Section title and description {% endcomment %}
-    {% render 'dynamic-section-header' with section_title: section.settings.title, section_description: section.settings.description, alignment: section.settings.section_header_alignment, wrapper_classes: 'wrapper-spacing--h' %}
+  <div class="homepage-sections-wrapper--{{ section.settings.color_scheme }} homepage-sections-wrapper{% if section.settings.show_fade %} show-fade{% endif %}" data-wetheme-section-type="scrolling-banner" data-wetheme-section-id="{{ section.id }}">
 
     <scrolling-banner
       class="animation-direction-{{ section.settings.animation_direction }}"
@@ -54,18 +47,12 @@
                       .{{ block.id }} .icon--placeholder,
                       .{{ block.id }} .content-image {
                         height: {{ block.settings.height_mobile }}px;
-                        {% unless section.settings.override_border_radius %}
-                          border-radius: var(--{% if block.settings.height_mobile < 52 %}badge{% elsif block.settings.height_mobile < 104 %}thumbnail{% else %}block{% endif %}-border-radius);
-                        {% endunless %}
                       }
     
                       @media (min-width: 768px) {
                         .{{ block.id }} .icon--placeholder,
                         .{{ block.id }} .content-image {
                           height: {{ block.settings.height_desktop }}px;
-                          {% unless section.settings.override_border_radius %}
-                            border-radius: var(--{% if block.settings.height_desktop < 52 %}badge{% elsif block.settings.height_desktop < 104 %}thumbnail{% else %}block{% endif %}-border-radius);
-                          {% endunless %}
                         }
                       }
                     </style>
@@ -118,30 +105,6 @@
   "class": "scrolling-banner",
   "settings": [
     {
-      "type": "header",
-      "content": "t:all.Heading"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "label": "t:all.Heading"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "t:all.Description"
-    },
-    {
-      "type": "text_alignment",
-      "id": "section_header_alignment",
-      "label": "t:all.Alignment",
-      "default": "center"
-    },
-    {
-      "type": "header",
-      "content": "t:all.Content"
-    },
-    {
       "type": "checkbox",
       "id": "show_fade",
       "label": "t:all.show_fade",
@@ -160,7 +123,7 @@
     {
       "type": "radio",
       "id": "animation_direction",
-      "label": "t:all.Animation_direction",
+      "label": "t:all.direction",
       "default": "normal",
       "options": [
         {
@@ -186,26 +149,6 @@
     {
       "type": "header",
       "content": "t:all.Layout"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top",
-      "label": "t:all.Spacing_top",
-      "min": 0,
-      "max": 150,
-      "step": 5,
-      "unit": "t:all.px",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom",
-      "label": "t:all.Spacing_bottom",
-      "min": 0,
-      "max": 150,
-      "step": 5,
-      "unit": "t:all.px",
-      "default": 60
     },
     {
       "type": "range",
@@ -248,13 +191,6 @@
       ]
     },
     {
-      "type": "checkbox",
-      "id": "override_border_radius",
-      "label": "t:all.override_border_radius",
-      "info": "t:all.override_border_radius_info",
-      "default": false
-    },
-    {
       "type": "header",
       "content": "t:all.Color"
     },
@@ -266,19 +202,19 @@
       "options": [
         {
           "value": "white",
-          "label": "t:all.Default"
+          "label": "t:all.Minimal"
         },
         {
           "value": "light",
-          "label": "t:all.First"
+          "label": "t:all.Light"
         },
         {
           "value": "accent",
-          "label": "t:all.Second"
+          "label": "t:all.Feature"
         },
         {
           "value": "dark",
-          "label": "t:all.Third"
+          "label": "t:all.Dark"
         }
       ]
     }
@@ -378,14 +314,9 @@
           "default": 60
         },
         {
-          "type": "header",
-          "content": "t:all.Link"
-        },
-        {
           "type": "url",
           "id": "link",
-          "label": "t:all.Link",
-          "info": "t:all.Optional"
+          "label": "t:all.Link"
         }
       ]
     },
@@ -400,24 +331,20 @@
           "default": "star",
           "options": [
             {
-              "value": "arrow-right-circle",
-              "label": "t:all.Arrow_circle"
+              "value": "home-smile",
+              "label": "t:all.Home_with_smile"
             },
             {
-              "value": "book",
-              "label": "t:all.Book"
+              "value": "store",
+              "label": "t:all.Store"
             },
             {
-              "value": "cake",
-              "label": "t:all.Cake"
+              "value": "flag",
+              "label": "t:all.Flag"
             },
             {
-              "value": "car",
-              "label": "t:all.Car"
-            },
-            {
-              "value": "multi-bubble",
-              "label": "t:all.Chat"
+              "value": "service",
+              "label": "t:all.Customer_service"
             },
             {
               "value": "chat",
@@ -428,164 +355,96 @@
               "label": "t:all.Chat_bubble_with_smile"
             },
             {
-              "value": "check-circle",
-              "label": "t:all.Check_circle"
-            },
-            {
-              "value": "clock",
-              "label": "t:all.Clock"
-            },
-            {
-              "value": "xmark-circle",
-              "label": "t:all.Cross"
-            },
-            {
-              "value": "crown",
-              "label": "t:all.Crown"
-            },
-            {
-              "value": "cup",
-              "label": "t:all.Cup"
-            },
-            {
-              "value": "service",
-              "label": "t:all.Customer_service"
-            },
-            {
-              "value": "delivery-truck",
-              "label": "t:all.Delivery"
-            },
-            {
-              "value": "leaf",
-              "label": "t:all.Eco"
-            },
-            {
-              "value": "mail",
-              "label": "t:all.Email"
-            },
-            {
-              "value": "exchange",
-              "label": "t:all.Exchange"
-            },
-            {
-              "value": "fire-flame",
-              "label": "t:all.Fire"
-            },
-            {
-              "value": "flag",
-              "label": "t:all.Flag"
-            },
-            {
-              "value": "gift",
-              "label": "t:all.Gift"
-            },
-            {
-              "value": "globe",
-              "label": "t:all.Globe"
-            },
-            {
-              "value": "handbag",
-              "label": "t:all.Handbag"
-            },
-            {
-              "value": "heart",
-              "label": "t:all.Heart"
-            },
-            {
-              "value": "help-circle",
-              "label": "t:all.Help_circle"
-            },
-            {
-              "value": "home-smile",
-              "label": "t:all.Home_with_smile"
-            },
-            {
-              "value": "info",
-              "label": "t:all.Info"
-            },
-            {
-              "value": "map-pin",
-              "label": "t:all.Map_pin"
-            },
-            {
-              "value": "measuring_tape",
-              "label": "t:all.Measuring_tape"
-            },
-            {
-              "value": "moon",
-              "label": "t:all.Moon"
-            },
-            {
-              "value": "phone",
-              "label": "t:all.Phone"
-            },
-            {
-              "value": "plus-circle",
-              "label": "t:all.Plus_circle"
-            },
-            {
-              "value": "price-tag",
-              "label": "t:all.Price_tag"
-            },
-            {
               "value": "question-answer",
               "label": "t:all.Question_and_answer"
-            },
-            {
-              "value": "quote",
-              "label": "t:all.Quote"
-            },
-            {
-              "value": "recycle",
-              "label": "t:all.Recycle"
-            },
-            {
-              "value": "restaurant",
-              "label": "t:all.Restaurant"
-            },
-            {
-              "value": "emoji",
-              "label": "t:all.Smiley"
-            },
-            {
-              "value": "sparks",
-              "label": "t:all.Sparks"
-            },
-            {
-              "value": "star",
-              "label": "t:all.Star"
-            },
-            {
-              "value": "store",
-              "label": "t:all.Store"
-            },
-            {
-              "value": "sun",
-              "label": "t:all.Sun"
-            },
-            {
-              "value": "takeaway",
-              "label": "t:all.Takeaway"
-            },
-            {
-              "value": "trophy",
-              "label": "t:all.Trophy"
-            },
-            {
-              "value": "truck",
-              "label": "t:all.Truck"
-            },
-            {
-              "value": "umbrella",
-              "label": "t:all.Umbrella"
             },
             {
               "value": "wallet",
               "label": "t:all.Wallet"
             },
             {
-              "value": "warning-circle",
-              "label": "t:all.Warning_circle"
+              "value": "price-tag",
+              "label": "t:all.Price_tag"
+            },
+            {
+              "value": "crown",
+              "label": "t:all.Crown"
+            },
+            {
+              "value": "exchange",
+              "label": "t:all.Exchange"
+            },
+            {
+              "value": "gift",
+              "label": "t:all.Gift"
+            },
+            {
+              "value": "clock",
+              "label": "t:all.Clock"
+            },
+            {
+              "value": "truck",
+              "label": "t:all.Truck"
+            },
+            {
+              "value": "measuring_tape",
+              "label": "t:all.Measuring_tape"
+            },
+            {
+              "value": "info",
+              "label": "t:all.Info"
+            },
+            {
+              "value": "heart",
+              "label": "t:all.Heart"
+            },
+            {
+              "value": "map-pin",
+              "label": "t:all.Map_pin"
+            },
+            {
+              "value": "car",
+              "label": "t:all.Car"
+            },
+            {
+              "value": "takeaway",
+              "label": "t:all.Takeaway"
+            },
+            {
+              "value": "restaurant",
+              "label": "t:all.Restaurant"
+            },
+            {
+              "value": "cup",
+              "label": "t:all.Cup"
+            },
+            {
+              "value": "star",
+              "label": "t:all.Star"
+            },
+            {
+              "value": "sun",
+              "label": "t:all.Sun"
+            },
+            {
+              "value": "moon",
+              "label": "t:all.Moon"
+            },
+            {
+              "value": "cake",
+              "label": "t:all.Cake"
+            },
+            {
+              "value": "handbag",
+              "label": "t:all.Handbag"
+            },
+            {
+              "value": "umbrella",
+              "label": "t:all.Umbrella"
+            },
+            {
+              "value": "recycle",
+              "label": "t:all.Recycle"
             }
           ]
         },
@@ -626,11 +485,6 @@
         }
       ]
     }
-  ],
-  "disabled_on": {
-    "groups": [
-      "custom.overlay"
-    ]
-  }
+  ]
 }
 {% endschema %}
