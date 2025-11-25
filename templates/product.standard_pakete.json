@@ -78,6 +78,12 @@
             "margin_bottom": 10
           }
         },
+        "separator_cQQxJN": {
+          "type": "separator",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -179,6 +185,7 @@
         "text_with_icon_DNkhpD",
         "text_with_icon_B6tQnx",
         "text_with_icon_rX7XzT",
+        "separator_cQQxJN",
         "price",
         "quantity",
         "options",
