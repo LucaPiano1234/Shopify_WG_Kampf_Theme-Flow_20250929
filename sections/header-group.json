@@ -1,1 +1,109 @@
-{"type":"header","name":"Header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement_trP7Qb":{"type":"announcement","settings":{"announcement_text":"🌱 Weingut Kampf - Ökologischer Weinbau in Flonheim","announcement_bg_color":"#6b8b6c","announcement_text_color":"#ffffff"}},"announcement_KhRCLe":{"type":"announcement","settings":{"announcement_text":"🚛 Versandkostenfreie Lieferung ab 150€","announcement_bg_color":"#6b8b6c","announcement_text_color":"#ffffff"}},"announcement_VxFAy6":{"type":"announcement","settings":{"announcement_text":"📞 Telefonnummer: <a href=\"tel:+4967341626\" title=\"tel:+4967341626 \">+49 673 416 26<\/a>  ⎥ ✉️ E-Mail: <a href=\"mailto:info@weingut-kampf.de\" title=\"Schreibe uns\">info@weingut-kampf.de<\/a>","announcement_bg_color":"#6b8b6c","announcement_text_color":"#ffffff"}}},"block_order":["announcement_trP7Qb","announcement_KhRCLe","announcement_VxFAy6"],"custom_css":[],"settings":{"desktop_social_icons":true}},"header":{"type":"header","blocks":{"content_ef96Fy":{"type":"content","settings":{"mega-menu":"","mega_image_1":"shopify:\/\/shop_images\/WeingutKampfKennenlernpaket.png","image_1_aspect_ratio":"square","mega_image_header_1":"","mega_image_subheader_1":"","overlay_text_on_image_promo_1":false,"overlay_text_color_promo_1":"#ffffff","mega_image_link_1":"shopify:\/\/products\/kennenlernpaket","show_promo_1_in_mobile_drawer":true,"image_2_aspect_ratio":"square","mega_image_header_2":"","mega_image_subheader_2":"","overlay_text_on_image_promo_2":true,"overlay_text_color_promo_2":"#ffffff","mega_image_link_2":"","show_promo_2_in_mobile_drawer":true}}},"block_order":["content_ef96Fy"],"settings":{"sticky_header":true,"enable_search":true,"logo":"shopify:\/\/shop_images\/logo-weingut-rheinhessen_kampf.png","logo-placement":"left","logo_max_width":100,"logo_max_width_mobile":100,"logo_padding":30,"mobile_social_icons":true,"show_icons":true,"cart-style":"shopping-bag","cart_count":true,"overlay_header_homepage":true,"overlay_header_collection":false,"overlay_header_list_collection":false,"overlay_header_contact":false,"overlay_logo":"shopify:\/\/shop_images\/logo-weingut-rheinhessen_kampf_630f283f-3761-4f44-be9a-2650024a505d.png","overlay_opacity":0,"show_currency_selector":true,"show_locale_selector":true,"main_linklist":"main-menu","dropdown_alignment":"left"}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_trP7Qb": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "🌱 Weingut Kampf - Ökologischer Weinbau in Flonheim",
+            "announcement_bg_color": "#6b8b6c",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_KhRCLe": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "🚛 Versandkostenfreie Lieferung ab 150€",
+            "announcement_bg_color": "#6b8b6c",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_VxFAy6": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "📞 Telefonnummer: <a href=\"tel:+4967341626\" title=\"tel:+4967341626 \">+49 673 416 26</a>  ⎥ ✉️ E-Mail: <a href=\"mailto:info@weingut-kampf.de\" title=\"Schreibe uns\">info@weingut-kampf.de</a>",
+            "announcement_bg_color": "#6b8b6c",
+            "announcement_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_trP7Qb",
+        "announcement_KhRCLe",
+        "announcement_VxFAy6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_social_icons": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "content_ef96Fy": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "shop",
+            "mega_image_1": "shopify://shop_images/WeingutKampfKennenlernpaket.png",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": false,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "shopify://products/kennenlernpaket",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        }
+      },
+      "block_order": [
+        "content_ef96Fy"
+      ],
+      "settings": {
+        "sticky_header": true,
+        "enable_search": true,
+        "logo": "shopify://shop_images/logo-weingut-rheinhessen_kampf.png",
+        "logo-placement": "left",
+        "logo_max_width": 100,
+        "logo_max_width_mobile": 100,
+        "logo_padding": 30,
+        "mobile_social_icons": true,
+        "show_icons": true,
+        "cart-style": "shopping-bag",
+        "cart_count": true,
+        "overlay_header_homepage": true,
+        "overlay_header_collection": false,
+        "overlay_header_list_collection": false,
+        "overlay_header_contact": false,
+        "overlay_logo": "shopify://shop_images/logo-weingut-rheinhessen_kampf_630f283f-3761-4f44-be9a-2650024a505d.png",
+        "overlay_opacity": 0,
+        "show_currency_selector": true,
+        "show_locale_selector": true,
+        "main_linklist": "main-menu",
+        "dropdown_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
